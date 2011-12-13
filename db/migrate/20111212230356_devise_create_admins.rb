@@ -5,7 +5,7 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.recoverable
       t.rememberable
       t.trackable
-
+      t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both, :maximum_attempts => 5, :unlock_in => 10
       # t.encryptable
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
