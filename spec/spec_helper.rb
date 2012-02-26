@@ -33,5 +33,6 @@ RSpec.configure do |config|
 
   #Controller specs won’t work out of the box if you’re using any of devise’s utility methods.
   #As of rspec-rails-2.0.0 and devise-1.1, the best way to put devise in your specs is simply to add the following into spec_helper:
-  config.include Devise::TestHelpers, :type => :controller
+  #config.include Devise::TestHelpers, :type => :controller
+  #^^ rspec/support/devise something similar!!!
 end
