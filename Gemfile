@@ -6,7 +6,7 @@ gem 'rails', '~>3.2.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +28,7 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+
 
 gem "devise"
 gem "therubyracer"
@@ -36,6 +36,7 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
 gem "pry", :group => [:development, :test]
+gem 'ruby-debug19', :require => 'ruby-debug', :group => [:development, :test]
 
 group :test do
   gem "factory_girl_rails"
