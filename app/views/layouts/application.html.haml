@@ -1,14 +1,29 @@
 !!!
 %html
   %head
-    %title Freacs - Free E-Auction System
+    %title F3AcS - Free E-Auction System
     = stylesheet_link_tag 'compass/screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compass/print.css', :media => 'print'
-    = stylesheet_link_tag    "application"
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Jockey+One"
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Nova+Mono'
     /[if lt IE 8]
       = stylesheet_link_tag 'compass/ie.css', :media => 'screen, projection'
       = csrf_meta_tag
     = javascript_include_tag "application"
   %body.bp
     #container
-      = yield
+      #header
+        - if current_user
+        - else
+          - if request.url.include?("users")
+            .login_link
+              = link_to t("login_admin"), new_admin_session_path
+          -else
+            .login_link
+              = link_to t("login_user"), new_user_session_path
+        .logo F3AcS
+        .logo_description
+          Free E-Auction System
+      #content
+        = yield
