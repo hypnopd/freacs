@@ -1,9 +1,14 @@
 !!!
 %html
   %head
-    %title Freacs
+    %title Freacs - Free E-Auction System
+    = stylesheet_link_tag 'compass/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compass/print.css', :media => 'print'
     = stylesheet_link_tag    "application"
+    /[if lt IE 8]
+      = stylesheet_link_tag 'compass/ie.css', :media => 'screen, projection'
+      = csrf_meta_tag
     = javascript_include_tag "application"
-    = csrf_meta_tags
-  %body
-    = yield
+  %body.bp
+    #container
+      = yield
