@@ -31,7 +31,7 @@ gem 'jquery-rails'
 
 # To use debugger
 
-
+gem "ancestry"
 gem "devise"
 gem "therubyracer"
 gem "haml", ">= 3.0.0"
