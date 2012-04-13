@@ -14,7 +14,7 @@
   %body.bp
     #container
       #header
-        - if current_user
+        - if current_user || current_admin
           =link_to t("logout"), destroy_user_session_path, :method => :delete
         - else
           - if request.url.include?("users")
@@ -26,5 +26,8 @@
         .logo F3AcS
         .logo_description
           Free E-Auction System
+      - flash.each do |name, msg|
+        #flash_message
+          = content_tag :div, msg, :class => "#{name}" if msg.is_a?(String)
       #content
         = yield

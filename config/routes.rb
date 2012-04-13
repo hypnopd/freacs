@@ -1,4 +1,6 @@
 Freacs::Application.routes.draw do
+  get "home/index"
+
   devise_for :admins,
     :path_names => {
       :sign_in => "login",
@@ -19,6 +21,10 @@ Freacs::Application.routes.draw do
 
   authenticated :user do
       root :to => "home#index"
+  end
+
+  authenticated :admin do
+      root :to => "admin/home#index", :as => "/admin/home"
   end
 
   # The priority is based upon order of creation:

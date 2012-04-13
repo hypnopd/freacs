@@ -6,11 +6,14 @@
   *zoom: 1;
 }
 
-/* line 10, ../../app/assets/stylesheets/application.css.sass */
+/* line 9, ../../app/assets/stylesheets/application.css.sass */
+#header {
+  margin-bottom: 20px;
+}
+/* line 11, ../../app/assets/stylesheets/application.css.sass */
 #header .logo {
   font-family: "Jockey One", sans-serif;
   font-size: 60px;
-  margin-bottom: 0;
 }
 /* line 14, ../../app/assets/stylesheets/application.css.sass */
 #header .logo_description {
@@ -19,27 +22,6 @@
 }
 
 /* line 18, ../../app/assets/stylesheets/application.css.sass */
-.kokot {
-  padding-left: 920px;
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 30px;
-}
-/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .kokot {
-  overflow-x: hidden;
-}
-
-/* line 22, ../../app/assets/stylesheets/application.css.sass */
-.pica {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: -80px;
-}
-
-/* line 25, ../../app/assets/stylesheets/application.css.sass */
 .login_form {
   display: inline;
   float: left;
@@ -49,4 +31,9 @@
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .login_form {
   overflow-x: hidden;
+}
+
+/* line 21, ../../app/assets/stylesheets/application.css.sass */
+#flash_message {
+  font-weight: bold;
 }
