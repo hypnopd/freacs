@@ -42,19 +42,24 @@
 #navigation ul {
   padding: 0;
   list-style: none;
+  background: #e3e3e3;
+  width: 350px;
+  height: 24px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
-/* line 28, ../../app/assets/stylesheets/application.css.sass */
+/* line 33, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li {
   font-weight: bold;
   display: inline-block;
-  margin-right: 8px;
+  margin: 5px 5px;
 }
-/* line 32, ../../app/assets/stylesheets/application.css.sass */
+/* line 37, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a {
   text-decoration: none;
 }
 
-/* line 34, ../../app/assets/stylesheets/application.css.sass */
+/* line 39, ../../app/assets/stylesheets/application.css.sass */
 ol li {
   margin-right: 8px;
   float: left;
