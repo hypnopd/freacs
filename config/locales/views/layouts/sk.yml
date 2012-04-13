@@ -2,3 +2,4 @@ sk:
   login_admin: Prihlásenie administrátora
   login_user: Prihlásenie používateľa
   logout: Odhlásenie
+  logged_as: Prihlásený %{email}

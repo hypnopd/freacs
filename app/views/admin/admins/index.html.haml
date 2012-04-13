@@ -1,2 +1,7 @@
-%h1 Admin::Admins#index
-%p Find me in app/views/admin/admins/index.html.haml
+%h1=t('administrators')
+#list
+  -if @admins
+    %ol
+      - @admins.each do |admin|
+        %li=admin.email
+        = link_to t('edit'), edit_admin_registration_path(admin)

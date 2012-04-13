@@ -37,3 +37,25 @@
 #flash_message {
   font-weight: bold;
 }
+
+/* line 25, ../../app/assets/stylesheets/application.css.sass */
+#navigation ul {
+  padding: 0;
+  list-style: none;
+}
+/* line 28, ../../app/assets/stylesheets/application.css.sass */
+#navigation ul li {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 8px;
+}
+/* line 32, ../../app/assets/stylesheets/application.css.sass */
+#navigation ul li a {
+  text-decoration: none;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.sass */
+ol li {
+  margin-right: 8px;
+  float: left;
+}

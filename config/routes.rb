@@ -27,6 +27,10 @@ Freacs::Application.routes.draw do
       root :to => "admin/home#index", :as => "/admin/home"
   end
 
+  namespace :admin do
+    resources :admins, :only => [:index, :show]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
