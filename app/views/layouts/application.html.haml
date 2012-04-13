@@ -15,6 +15,7 @@
     #container
       #header
         - if current_user
+          =link_to t("logout"), destroy_user_session_path, :method => :delete
         - else
           - if request.url.include?("users")
             .login_link
