@@ -65,7 +65,11 @@ body.bp {
   text-decoration: none;
 }
 
-/* line 44, ../../app/assets/stylesheets/application.css.sass */
+/* line 43, ../../app/assets/stylesheets/application.css.sass */
+#content {
+  margin: 0 10px;
+}
+/* line 45, ../../app/assets/stylesheets/application.css.sass */
 #content ol {
   display: inline;
   float: left;
@@ -76,7 +80,7 @@ body.bp {
 * html #content ol {
   overflow-x: hidden;
 }
-/* line 46, ../../app/assets/stylesheets/application.css.sass */
+/* line 47, ../../app/assets/stylesheets/application.css.sass */
 #content ol li {
   display: inline;
   float: left;
@@ -87,7 +91,7 @@ body.bp {
 * html #content ol li {
   overflow-x: hidden;
 }
-/* line 49, ../../app/assets/stylesheets/application.css.sass */
+/* line 50, ../../app/assets/stylesheets/application.css.sass */
 #content ol li a.email {
   display: inline;
   float: left;
@@ -100,7 +104,7 @@ body.bp {
 * html #content ol li a.email {
   overflow-x: hidden;
 }
-/* line 53, ../../app/assets/stylesheets/application.css.sass */
+/* line 54, ../../app/assets/stylesheets/application.css.sass */
 #content ol li a {
   display: inline;
   float: left;
@@ -112,7 +116,7 @@ body.bp {
   overflow-x: hidden;
 }
 
-/* line 55, ../../app/assets/stylesheets/application.css.sass */
+/* line 56, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -125,7 +129,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 60, ../../app/assets/stylesheets/application.css.sass */
+/* line 61, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -140,7 +144,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 66, ../../app/assets/stylesheets/application.css.sass */
+/* line 67, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -151,11 +155,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 68, ../../app/assets/stylesheets/application.css.sass */
+/* line 69, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 70, ../../app/assets/stylesheets/application.css.sass */
+/* line 71, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
