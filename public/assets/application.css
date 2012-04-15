@@ -51,29 +51,27 @@ body.bp {
   padding: 0;
   list-style: none;
   background: #00e0ff;
-  width: 350px;
-  height: 24px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  width: 950px;
+  height: 50px;
+  font-size: 2em;
 }
-/* line 39, ../../app/assets/stylesheets/application.css.sass */
+/* line 38, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li {
-  font-weight: bold;
   display: inline-block;
   margin: 5px 5px;
 }
-/* line 43, ../../app/assets/stylesheets/application.css.sass */
+/* line 41, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a {
   text-decoration: none;
 }
 
-/* line 45, ../../app/assets/stylesheets/application.css.sass */
+/* line 43, ../../app/assets/stylesheets/application.css.sass */
 ol li {
   margin-right: 8px;
   float: left;
 }
 
-/* line 49, ../../app/assets/stylesheets/application.css.sass */
+/* line 47, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -86,7 +84,7 @@ ol li {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 54, ../../app/assets/stylesheets/application.css.sass */
+/* line 52, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -101,7 +99,7 @@ ol li {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 60, ../../app/assets/stylesheets/application.css.sass */
+/* line 58, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -112,11 +110,11 @@ ol li {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 62, ../../app/assets/stylesheets/application.css.sass */
+/* line 60, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 64, ../../app/assets/stylesheets/application.css.sass */
+/* line 62, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
