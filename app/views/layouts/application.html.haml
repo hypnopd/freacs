@@ -13,20 +13,21 @@
     = javascript_include_tag "application"
   %body.bp
     #container
-      #header
+      #infobar
         - if current_user
-          =t("logged_as", :email => current_user.email) if current_user
+          %span
+            =t("logged_as", :email => current_user.email) if current_user
           =link_to t("logout"), destroy_user_session_path, :method => :delete
         - elsif current_admin
-          =t("logged_as", :email => current_admin.email) if current_admin
+          %span
+            =t("logged_as", :email => current_admin.email) if current_admin
           =link_to t("logout"), destroy_admin_session_path, :method => :delete
         - else
           - if request.url.include?("users")
-            .login_link
-              = link_to t("login_admin"), new_admin_session_path
+            = link_to t("login_admin"), new_admin_session_path
           -else
-            .login_link
-              = link_to t("login_user"), new_user_session_path
+            = link_to t("login_user"), new_user_session_path
+      #header
         .logo F3AcS
         .logo_description
           Free E-Auction System

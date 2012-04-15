@@ -1,27 +1,36 @@
-/* line 6, ../../app/assets/stylesheets/application.css.sass */
+@import url(base.css);
+/* line 7, ../../app/assets/stylesheets/application.css.sass */
+body.bp {
+  background-color: #eeeeee;
+}
+
+/* line 10, ../../app/assets/stylesheets/application.css.sass */
 #container {
+  margin: 5px 0;
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+  background: white;
 }
 
-/* line 9, ../../app/assets/stylesheets/application.css.sass */
+/* line 15, ../../app/assets/stylesheets/application.css.sass */
 #header {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background: #e6fcff;
 }
-/* line 11, ../../app/assets/stylesheets/application.css.sass */
+/* line 18, ../../app/assets/stylesheets/application.css.sass */
 #header .logo {
   font-family: "Jockey One", sans-serif;
   font-size: 60px;
 }
-/* line 14, ../../app/assets/stylesheets/application.css.sass */
+/* line 21, ../../app/assets/stylesheets/application.css.sass */
 #header .logo_description {
   font-family: "Nova Mono", cursive;
   font-size: 18px;
 }
 
-/* line 18, ../../app/assets/stylesheets/application.css.sass */
+/* line 25, ../../app/assets/stylesheets/application.css.sass */
 .login_form {
   display: inline;
   float: left;
@@ -33,34 +42,82 @@
   overflow-x: hidden;
 }
 
-/* line 21, ../../app/assets/stylesheets/application.css.sass */
+/* line 28, ../../app/assets/stylesheets/application.css.sass */
 #flash_message {
   font-weight: bold;
 }
 
-/* line 25, ../../app/assets/stylesheets/application.css.sass */
+/* line 32, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul {
   padding: 0;
   list-style: none;
-  background: #e3e3e3;
+  background: #00e0ff;
   width: 350px;
   height: 24px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }
-/* line 33, ../../app/assets/stylesheets/application.css.sass */
+/* line 40, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li {
   font-weight: bold;
   display: inline-block;
   margin: 5px 5px;
 }
-/* line 37, ../../app/assets/stylesheets/application.css.sass */
+/* line 44, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a {
   text-decoration: none;
 }
 
-/* line 39, ../../app/assets/stylesheets/application.css.sass */
+/* line 46, ../../app/assets/stylesheets/application.css.sass */
 ol li {
   margin-right: 8px;
   float: left;
+}
+
+/* line 50, ../../app/assets/stylesheets/application.css.sass */
+#infobar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  background: #407880;
+  color: white;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #infobar {
+  overflow-x: hidden;
+}
+/* line 55, ../../app/assets/stylesheets/application.css.sass */
+#infobar > a {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 190px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  text-align: right;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #infobar > a {
+  overflow-x: hidden;
+}
+/* line 61, ../../app/assets/stylesheets/application.css.sass */
+#infobar span {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #infobar span {
+  overflow-x: hidden;
+}
+/* line 63, ../../app/assets/stylesheets/application.css.sass */
+#infobar span + a {
+  padding-left: 560px;
+}
+/* line 65, ../../app/assets/stylesheets/application.css.sass */
+#infobar a {
+  padding-left: 760px;
 }

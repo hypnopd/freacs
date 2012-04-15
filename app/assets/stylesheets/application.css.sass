@@ -1,13 +1,20 @@
 // Include some nice mixins
 //@import "compass/css3"
 @import "sassybuttons"
+@import "base.css"
 @import "blueprint"
 
+body.bp
+  background-color: $blueprint-background-color
+
 #container
+  margin: 5px 0
   +container
+  background: #ffffff
 
 #header
-  margin-bottom: 20px
+  padding-bottom: 20px
+  background: #e6fcff
   .logo
     font-family: 'Jockey One', sans-serif
     font-size: 60px
@@ -25,7 +32,7 @@
   ul
     padding: 0
     list-style: none
-    background: #e3e3e3
+    background: #00e0ff
     width: 350px
     height: 24px
     -moz-border-radius: 10px
@@ -39,4 +46,22 @@
 ol li
   margin-right: 8px
   float: left
+
+#infobar
+  +column(24)
+  background: #407880
+  color: #ffffff
+
+  > a
+    +column(5,last)
+    text-decoration: none
+    color: inherit
+    font-weight: bold
+    text-align: right
+  span
+    +column(5)
+    + a
+      +prepend(14)
+  a
+    +prepend(19)
 
