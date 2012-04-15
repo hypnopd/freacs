@@ -1,0 +1,16 @@
+sk:
+  devise:
+    registrations:
+      new:
+        admin_registration: Regitrácia administrátora
+        password_confirmation: Potvrdenie hesla
+        register: Registruj
+      edit:
+        edit: Editácia %{resource_name}
+        password: Heslo
+        password_confirmation: Potvrdenie hesla
+        leave_blank: (Nechajte prázdne pokiaľ ho nechcete meniť)
+        current_password: Súčasné heslo
+        need_current_password: (Potrebujeme vaše súčasné heslo pre potvrdenie zmien)
+        update: Uprav
+        back: Späť

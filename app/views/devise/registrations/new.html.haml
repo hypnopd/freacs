@@ -1,17 +1,18 @@
-%h2 Sign up
+%h2=t('.admin_registration')
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
+  .error
+    = devise_error_messages!
   %div
     = f.label :email
     %br/
     = f.email_field :email
   %div
-    = f.label :password
+    = f.label t(".password")
     %br/
     = f.password_field :password
   %div
-    = f.label :password_confirmation
+    = f.label t('.password_confirmation')
     %br/
     = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
-= render "links"
+  %div= f.submit t(".register")
+-#= render "links"
