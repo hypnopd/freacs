@@ -40,10 +40,18 @@ body.bp
       margin: 5px 5px
       a
         text-decoration: none
-ol li
-  margin-right: 8px
-  float: left
+#content
+  ol
+    +column(12)
+    li
+      +column(8)
 
+      a.email
+        +column(5)
+        font-weight: bold
+        text-decoration: none
+      a
+        +column(3)
 #infobar
   +column(24)
   background: #407880

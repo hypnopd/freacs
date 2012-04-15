@@ -65,13 +65,54 @@ body.bp {
   text-decoration: none;
 }
 
-/* line 43, ../../app/assets/stylesheets/application.css.sass */
-ol li {
-  margin-right: 8px;
+/* line 44, ../../app/assets/stylesheets/application.css.sass */
+#content ol {
+  display: inline;
   float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content ol {
+  overflow-x: hidden;
+}
+/* line 46, ../../app/assets/stylesheets/application.css.sass */
+#content ol li {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content ol li {
+  overflow-x: hidden;
+}
+/* line 49, ../../app/assets/stylesheets/application.css.sass */
+#content ol li a.email {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content ol li a.email {
+  overflow-x: hidden;
+}
+/* line 53, ../../app/assets/stylesheets/application.css.sass */
+#content ol li a {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 110px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content ol li a {
+  overflow-x: hidden;
 }
 
-/* line 47, ../../app/assets/stylesheets/application.css.sass */
+/* line 55, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -84,7 +125,7 @@ ol li {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 52, ../../app/assets/stylesheets/application.css.sass */
+/* line 60, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -99,7 +140,7 @@ ol li {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 58, ../../app/assets/stylesheets/application.css.sass */
+/* line 66, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -110,11 +151,11 @@ ol li {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 60, ../../app/assets/stylesheets/application.css.sass */
+/* line 68, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 62, ../../app/assets/stylesheets/application.css.sass */
+/* line 70, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }

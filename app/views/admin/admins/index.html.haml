@@ -5,5 +5,6 @@
   -if @admins
     %ol
       - @admins.each do |admin|
-        %li=admin.email
-        = link_to t('edit'), edit_admin_registration_path(admin)
+        %li
+          = link_to admin.email, admin_admin_path(admin), :class => "email"
+          = link_to t('edit'), edit_admin_registration_path(admin)
