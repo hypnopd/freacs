@@ -1,7 +1,7 @@
 Freacs::Application.routes.draw do
-  get "home/index"
 
   devise_for :admins,
+    :controllers => {:registrations => "admin/registrations"},
     :path_names => {
       :sign_in => "login",
       :sign_out => "logout",
