@@ -31,11 +31,11 @@
         .logo F3AcS
         .logo_description
           Free E-Auction System
-      - flash.each do |name, msg|
-        #flash_message
-          = content_tag :div, msg, :class => "#{name}" if msg.is_a?(String)
       #navigation
         -if current_user || current_admin
           = render_navigation
+      - flash.each do |name, msg|
+        #flash_message
+          = content_tag :div, msg, :class => "#{name}" if msg.is_a?(String)
       #content
         = yield
