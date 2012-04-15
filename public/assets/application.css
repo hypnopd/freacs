@@ -1,10 +1,9 @@
-@import url(base.css);
-/* line 7, ../../app/assets/stylesheets/application.css.sass */
+/* line 6, ../../app/assets/stylesheets/application.css.sass */
 body.bp {
   background-color: #eeeeee;
 }
 
-/* line 10, ../../app/assets/stylesheets/application.css.sass */
+/* line 9, ../../app/assets/stylesheets/application.css.sass */
 #container {
   margin: 5px 0;
   width: 950px;
@@ -14,23 +13,23 @@ body.bp {
   background: white;
 }
 
-/* line 15, ../../app/assets/stylesheets/application.css.sass */
+/* line 14, ../../app/assets/stylesheets/application.css.sass */
 #header {
   padding-bottom: 20px;
   background: #e6fcff;
 }
-/* line 18, ../../app/assets/stylesheets/application.css.sass */
+/* line 17, ../../app/assets/stylesheets/application.css.sass */
 #header .logo {
   font-family: "Jockey One", sans-serif;
   font-size: 60px;
 }
-/* line 21, ../../app/assets/stylesheets/application.css.sass */
+/* line 20, ../../app/assets/stylesheets/application.css.sass */
 #header .logo_description {
   font-family: "Nova Mono", cursive;
   font-size: 18px;
 }
 
-/* line 25, ../../app/assets/stylesheets/application.css.sass */
+/* line 24, ../../app/assets/stylesheets/application.css.sass */
 .login_form {
   display: inline;
   float: left;
@@ -42,12 +41,12 @@ body.bp {
   overflow-x: hidden;
 }
 
-/* line 28, ../../app/assets/stylesheets/application.css.sass */
+/* line 27, ../../app/assets/stylesheets/application.css.sass */
 #flash_message {
   font-weight: bold;
 }
 
-/* line 32, ../../app/assets/stylesheets/application.css.sass */
+/* line 31, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul {
   padding: 0;
   list-style: none;
@@ -57,24 +56,24 @@ body.bp {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }
-/* line 40, ../../app/assets/stylesheets/application.css.sass */
+/* line 39, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li {
   font-weight: bold;
   display: inline-block;
   margin: 5px 5px;
 }
-/* line 44, ../../app/assets/stylesheets/application.css.sass */
+/* line 43, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a {
   text-decoration: none;
 }
 
-/* line 46, ../../app/assets/stylesheets/application.css.sass */
+/* line 45, ../../app/assets/stylesheets/application.css.sass */
 ol li {
   margin-right: 8px;
   float: left;
 }
 
-/* line 50, ../../app/assets/stylesheets/application.css.sass */
+/* line 49, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -87,7 +86,7 @@ ol li {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 55, ../../app/assets/stylesheets/application.css.sass */
+/* line 54, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -102,7 +101,7 @@ ol li {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 61, ../../app/assets/stylesheets/application.css.sass */
+/* line 60, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -113,11 +112,11 @@ ol li {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 63, ../../app/assets/stylesheets/application.css.sass */
+/* line 62, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 65, ../../app/assets/stylesheets/application.css.sass */
+/* line 64, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
