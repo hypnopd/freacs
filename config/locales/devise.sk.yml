@@ -14,8 +14,8 @@ sk:
       already_confirmed: "bol už potvrdený, skúste sa prihlásiť"
       not_locked: "nebol uzamknutý"
       not_saved:
-        one: "%{resource} nebol uložený kôli chybe:"
-        other: "%{resource} nebol uložený kôli %{count} chybám:"
+        one: "%{resource} nebol uložený kvôli chybe:"
+        other: "%{resource} nebol uložený kvôli %{count} chybám:"
 
   devise:
     failure:
