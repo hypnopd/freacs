@@ -7,5 +7,6 @@ class Admin::AdminsController < ApplicationController
   end
 
   def show
+    @admin = Admin.find(params[:id])
   end
 end

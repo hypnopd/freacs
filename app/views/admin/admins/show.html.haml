@@ -1,2 +1,5 @@
-%h1 Admin::Admins#show
-%p Find me in app/views/admin/admins/show.html.haml
+%h1= @admin.email
+%p
+  =t(".last_logged", :datetime => "#{@admin.last_sign_in_at}")
+  %br/
+  = link_to :back

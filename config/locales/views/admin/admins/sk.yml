@@ -1,3 +1,8 @@
 sk:
-  administrators: Administrátori
-  new_admin: Nový administrátor
+  admin:
+    admins:
+      index:
+        administrators: Administrátori
+        new_admin: Nový administrátor
+      show:
+        last_logged: "Naposledy prihlásený: %{datetime}"
