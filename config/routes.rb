@@ -29,6 +29,7 @@ Freacs::Application.routes.draw do
 
   namespace :admin do
     resources :admins, :only => [:index, :show]
+    resources :users, :only => [:index, :show]
   end
 
   # The priority is based upon order of creation:

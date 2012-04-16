@@ -1,14 +1,14 @@
-%h1=t('.administrators')
-=link_to t(".new_admin"), new_admin_registration_path
+%h2=t("users")
+=link_to t(".new_user"), "#"#new_admin_user_registration_path
 
--if @admins
+-if @users
   %table
     %thead
       %tr
         %th=t('.email')
         %th=t('.actions')
     %tbody
-      - @admins.each do |admin|
+      - @users.each do |admin|
         %tr
           %td= link_to admin.email, admin_admin_path(admin), :class => "email"
           %td= link_to t('edit'), edit_admin_registration_path(admin), :class => "edit"
