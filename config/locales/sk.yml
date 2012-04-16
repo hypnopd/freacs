@@ -199,3 +199,4 @@ sk:
     errors:
       <<: *errors
   back: Späť
+  edit: Uprav

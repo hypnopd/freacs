@@ -2,6 +2,7 @@
 //@import "compass/css3"
 @import "sassybuttons"
 @import "blueprint"
+@import "blueprint/form"
 
 body.bp
   background-color: $blueprint-background-color
@@ -48,6 +49,9 @@ body.bp
   margin: 0 10px
   table
     margin: 15px 0
+  form
+    +blueprint-form
+    +blueprint-form-borders
 
 #infobar
   +column(24)

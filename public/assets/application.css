@@ -1,9 +1,9 @@
-/* line 6, ../../app/assets/stylesheets/application.css.sass */
+/* line 7, ../../app/assets/stylesheets/application.css.sass */
 body.bp {
   background-color: #eeeeee;
 }
 
-/* line 9, ../../app/assets/stylesheets/application.css.sass */
+/* line 10, ../../app/assets/stylesheets/application.css.sass */
 #container {
   margin: 5px 0;
   width: 950px;
@@ -13,23 +13,23 @@ body.bp {
   background: white;
 }
 
-/* line 14, ../../app/assets/stylesheets/application.css.sass */
+/* line 15, ../../app/assets/stylesheets/application.css.sass */
 #header {
   padding-bottom: 20px;
   background: #e6fcff;
 }
-/* line 17, ../../app/assets/stylesheets/application.css.sass */
+/* line 18, ../../app/assets/stylesheets/application.css.sass */
 #header .logo {
   font-family: "Jockey One", sans-serif;
   font-size: 60px;
 }
-/* line 20, ../../app/assets/stylesheets/application.css.sass */
+/* line 21, ../../app/assets/stylesheets/application.css.sass */
 #header .logo_description {
   font-family: "Nova Mono", cursive;
   font-size: 18px;
 }
 
-/* line 24, ../../app/assets/stylesheets/application.css.sass */
+/* line 25, ../../app/assets/stylesheets/application.css.sass */
 .login_form {
   display: inline;
   float: left;
@@ -41,12 +41,12 @@ body.bp {
   overflow-x: hidden;
 }
 
-/* line 27, ../../app/assets/stylesheets/application.css.sass */
+/* line 28, ../../app/assets/stylesheets/application.css.sass */
 #flash_message {
   font-weight: bold;
 }
 
-/* line 31, ../../app/assets/stylesheets/application.css.sass */
+/* line 32, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul {
   padding: 0;
   list-style: none;
@@ -55,34 +55,116 @@ body.bp {
   height: 50px;
   font-size: 2em;
 }
-/* line 38, ../../app/assets/stylesheets/application.css.sass */
+/* line 39, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li {
   display: inline-block;
   margin: 5px 5px;
 }
-/* line 41, ../../app/assets/stylesheets/application.css.sass */
+/* line 42, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a {
   text-decoration: none;
 }
-/* line 43, ../../app/assets/stylesheets/application.css.sass */
+/* line 44, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a:hover {
   color: white;
 }
-/* line 45, ../../app/assets/stylesheets/application.css.sass */
+/* line 46, ../../app/assets/stylesheets/application.css.sass */
 #navigation ul li a.selected {
   font-weight: bold;
 }
 
-/* line 47, ../../app/assets/stylesheets/application.css.sass */
+/* line 48, ../../app/assets/stylesheets/application.css.sass */
 #content {
   margin: 0 10px;
 }
-/* line 49, ../../app/assets/stylesheets/application.css.sass */
+/* line 50, ../../app/assets/stylesheets/application.css.sass */
 #content table {
   margin: 15px 0;
 }
+/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form label {
+  font-weight: bold;
+}
+/* line 19, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form fieldset {
+  padding: 1.4em;
+  margin: 0 0 1.5em 0;
+}
+/* line 20, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/* line 26, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password] {
+  margin: 0.5em 0;
+  background-color: white;
+  padding: 5px;
+}
+/* line 27, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.title {
+  font-size: 1.5em;
+}
+/* line 29, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form textarea {
+  margin: 0.5em 0;
+  padding: 5px;
+}
+/* line 30, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form select {
+  margin: 0.5em 0;
+}
+/* line 55, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form fieldset {
+  border: 1px solid #cccccc;
+}
+/* line 58, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password],
+#content form textarea {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+}
+/* line 61, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text:focus, #content form input.title:focus, #content form input[type=email]:focus, #content form input[type=text]:focus, #content form input[type=password]:focus,
+#content form textarea:focus {
+  border-color: #666666;
+}
+/* line 65, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 44, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password] {
+  width: 300px;
+}
+/* line 46, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form textarea {
+  width: 390px;
+  height: 250px;
+}
+/* line 55, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form fieldset {
+  border: 1px solid #cccccc;
+}
+/* line 58, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password], #content form textarea {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+}
+/* line 61, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form input.text:focus, #content form input.title:focus, #content form input[type=email]:focus, #content form input[type=text]:focus, #content form input[type=password]:focus, #content form textarea:focus {
+  border-color: #666666;
+}
+/* line 65, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#content form select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
 
-/* line 52, ../../app/assets/stylesheets/application.css.sass */
+/* line 56, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -95,7 +177,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 57, ../../app/assets/stylesheets/application.css.sass */
+/* line 61, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -110,7 +192,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 63, ../../app/assets/stylesheets/application.css.sass */
+/* line 67, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -121,11 +203,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 65, ../../app/assets/stylesheets/application.css.sass */
+/* line 69, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 67, ../../app/assets/stylesheets/application.css.sass */
+/* line 71, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
