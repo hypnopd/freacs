@@ -198,3 +198,4 @@ sk:
   activerecord:
     errors:
       <<: *errors
+  back: Späť
