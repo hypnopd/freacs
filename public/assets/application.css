@@ -64,17 +64,25 @@ body.bp {
 #navigation ul li a {
   text-decoration: none;
 }
-
 /* line 43, ../../app/assets/stylesheets/application.css.sass */
+#navigation ul li a:hover {
+  color: white;
+}
+/* line 45, ../../app/assets/stylesheets/application.css.sass */
+#navigation ul li a.selected {
+  font-weight: bold;
+}
+
+/* line 47, ../../app/assets/stylesheets/application.css.sass */
 #content {
   margin: 0 10px;
 }
-/* line 45, ../../app/assets/stylesheets/application.css.sass */
+/* line 49, ../../app/assets/stylesheets/application.css.sass */
 #content table {
   margin: 15px 0;
 }
 
-/* line 48, ../../app/assets/stylesheets/application.css.sass */
+/* line 52, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   display: inline;
   float: left;
@@ -87,7 +95,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 53, ../../app/assets/stylesheets/application.css.sass */
+/* line 57, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -102,7 +110,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 59, ../../app/assets/stylesheets/application.css.sass */
+/* line 63, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -113,11 +121,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 61, ../../app/assets/stylesheets/application.css.sass */
+/* line 65, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 63, ../../app/assets/stylesheets/application.css.sass */
+/* line 67, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }

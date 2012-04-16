@@ -51,7 +51,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :e_auctions, t('e-auctions'), "#"
     if current_admin
-      primary.item :admins, t('admins'), admin_admins_path
+      primary.item :admins, t('admins'), admin_admins_path, :highlights_on => /\/admin\/admins/
       primary.item :others, t('users'), "#"
     end
     primary.item :users, t('users'), "#", :if => Proc.new {current_user}
