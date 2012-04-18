@@ -1,7 +1,8 @@
-%h2=t('.admin_registration')
+%h2="#{current_user ? t("users.index.new_user"):t('.admin_registration')}"
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  .error
-    = devise_error_messages!
+  -unless resource.errors.empty?
+    .error
+      = devise_error_messages!
   %div
     = f.label :email
     %br/

@@ -52,9 +52,9 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :e_auctions, t('e-auctions'), "#"
     if current_admin
       primary.item :admins, t('admins'), admin_admins_path, :highlights_on => /\/admin\/admins/
-      primary.item :others, t('users'), admin_users_path, :highlights_on => /\/admin\/users/
+      primary.item :others, t('users.users'), admin_users_path, :highlights_on => /\/admin\/users/
     end
-    primary.item :users, t('users'), "#", :if => Proc.new {current_user}
+    primary.item :users, t('users.users'), users_path, :if => Proc.new {current_user}
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|
       # Add an item to the sub navigation (same params again)

@@ -1,2 +1,15 @@
-%h1 Users#index
-%p Find me in app/views/users/index.html.haml
+%h2=t("users.users")
+
+=link_to t(".new_user"), new_user_registration_path
+
+-if @users
+  %table
+    %thead
+      %tr
+        %th=t('.email')
+        %th=t('.actions')
+    %tbody
+      - @users.each do |admin|
+        %tr
+          %td= link_to admin.email, admin_admin_path(admin), :class => "email"
+          %td= link_to t('edit'), edit_admin_registration_path(admin), :class => "edit"
