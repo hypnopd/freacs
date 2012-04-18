@@ -8,6 +8,7 @@ Freacs::Application.routes.draw do
       :sign_up => "register"
     }
 
+
   devise_for :users,
     :controllers => {:registrations => "registrations"},
     :path_names => {
@@ -31,6 +32,7 @@ Freacs::Application.routes.draw do
   namespace :admin do
     resources :admins, :only => [:index, :show]
     resources :users, :only => [:index, :show]
+    get "users/register" => "devise/registrations#new", :as => :users_register
   end
 
   # The priority is based upon order of creation:
