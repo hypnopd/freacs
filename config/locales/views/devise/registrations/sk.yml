@@ -2,6 +2,7 @@ sk:
   devise:
     registrations:
       new:
+        password: Heslo
         admin_registration: Regitrácia administrátora
         password_confirmation: Potvrdenie hesla
         register: Registruj
