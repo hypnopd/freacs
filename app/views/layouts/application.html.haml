@@ -11,6 +11,7 @@
       = stylesheet_link_tag 'compass/ie.css', :media => 'screen, projection'
       = csrf_meta_tag
     = javascript_include_tag "application"
+    = javascript_include_tag "jquery.jclock.js"
   %body.bp
     #container
       #infobar
@@ -29,8 +30,11 @@
             = link_to t("login_user"), new_user_session_path
       #header
         .logo F3AcS
+        .clock
         .logo_description
           Free E-Auction System
+        .empty
+        %hr
       #navigation
         -if current_user || current_admin
           = render_navigation
@@ -39,3 +43,7 @@
           = content_tag :div, msg, :class => "#{name}" if msg.is_a?(String)
       #content
         = yield
+:javascript
+  $(function($) {
+        $('.clock').jclock();
+      });

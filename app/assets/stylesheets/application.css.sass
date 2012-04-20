@@ -13,14 +13,23 @@ body.bp
   background: #ffffff
 
 #header
-  padding-bottom: 20px
+  margin-bottom: 20px
   background: #e6fcff
   .logo
+    +column(5)
     font-family: 'Jockey One', sans-serif
     font-size: 60px
+  .clock
+    +prepend(15)
+    +column(4,last)
+    height: 90px
+    font-size: 3em
   .logo_description
+    +column(24,last)
     font-family: 'Nova Mono', cursive
     font-size: 18px
+  hr
+    +colruler(#000fff)
 
 .login_form
   +column(15)
