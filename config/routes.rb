@@ -1,17 +1,5 @@
 Freacs::Application.routes.draw do
 
-  devise_for :admins,
-    :controllers => {:registrations => "admin/registrations"},
-    :path_names => {
-      :sign_in => "login",
-      :sign_out => "logout",
-      :sign_up => "register"
-    }
-
-  devise_scope :user do
-    get "admins/user/register" => "registrations#new"
-  end
-
   devise_for :users,
     :controllers => {:registrations => "registrations"},
     :path_names => {
@@ -26,16 +14,6 @@ Freacs::Application.routes.draw do
 
   authenticated :user do
       root :to => "home#index"
-  end
-
-  authenticated :admin do
-      root :to => "admin/home#index", :as => "/admin/home"
-  end
-
-  namespace :admin do
-    resources :admins, :only => [:index, :show]
-    resources :users, :only => [:index, :show]
-
   end
 
   # The priority is based upon order of creation:
