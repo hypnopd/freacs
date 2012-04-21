@@ -9,7 +9,6 @@ Freacs::Application.routes.draw do
     }
 
   resources :users, :only => [:index, :show]
-  resources :admins, :only => [:index, :show]
   resource :home, :only => [:index, :welcome]
 
   authenticated :user do

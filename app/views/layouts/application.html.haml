@@ -19,15 +19,8 @@
           %span
             =t("logged_as", :email => current_user.email) if current_user
           =link_to t("logout"), destroy_user_session_path, :method => :delete
-        - elsif current_admin
-          %span
-            =t("logged_as", :email => current_admin.email) if current_admin
-          =link_to t("logout"), destroy_admin_session_path, :method => :delete
-        - else
-          - if request.url.include?("users")
-            = link_to t("login_admin"), new_admin_session_path
-          -else
-            = link_to t("login_user"), new_user_session_path
+        -else
+          = link_to t("login_user"), new_user_session_path
       #header
         .logo F3AcS
         .clock
@@ -36,7 +29,7 @@
         .empty
         %hr
       #navigation
-        -if current_user || current_admin
+        -if current_user
           = render_navigation
       - flash.each do |name, msg|
         #flash_message
