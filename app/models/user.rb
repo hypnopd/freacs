@@ -5,6 +5,42 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :confirmed_at
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :confirmed_at, :role
   has_ancestry
+
+  ROLES = {:admin => "admin",
+           :creator => "creator",
+           :creator_viewer => "creator_viewer",
+           :competitor => "competitor",
+           :competitor_viewer => "competitor_viewer"
+  }
+
+  def role?(role_name)
+    if ROLES.include?(role_name.to_sym)
+      role == role_name if role_name.is_a?(String)
+    else
+      raise Exception::IndexError::KeyError
+    end
+  end
+
+  def admin?
+    role == ROLES[:admin]
+  end
+
+  def creator?
+    role == ROLES[:creator]
+  end
+
+  def creator_viewer?
+    role == ROLES[:creator_viewer]
+  end
+
+  def competitor?
+    role == ROLES[:competitor]
+  end
+
+  def competitor_viewer?
+    role == ROLES[:competitor_viewer]
+  end
+
 end
