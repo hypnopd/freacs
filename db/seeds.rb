@@ -8,10 +8,14 @@
 
 #default admin
 puts "Creation of Admin user"
-admin = User.create! :email => "admin@admin.com", :password => "admin12", :password_confirmation => "admin12", :confirmed_at => DateTime.now
+admin = User.create! :email => "admin@admin.com", :password => "admin11", :password_confirmation => "admin11",
+                     :confirmed_at => DateTime.now
+admin.update_attribute :parent, admin
 puts "Created Admin user: " << admin.email
 
 #default user
 puts "Creation of User"
-user = User.create! :email => "user@user.com", :password => "user12", :password_confirmation => "user12", :confirmed_at => DateTime.now
+user = User.create! :email => "user@user.com", :password => "user11", :password_confirmation => "user11",
+                    :confirmed_at => DateTime.now
+user.update_attribute :parent, admin
 puts "Created User: " << user.email
