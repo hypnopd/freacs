@@ -11,5 +11,5 @@
     %tbody
       - @users.each do |user|
         %tr
-          %td= link_to user.email, admin_admin_path(user), :class => "email"
-          %td= link_to t('edit'), edit_admin_registration_path(user), :class => "edit"
+          %td= link_to user.email, user_path(user), :class => "email"
+          %td= link_to t('edit'), edit_user_registration_path(user), :class => "edit"

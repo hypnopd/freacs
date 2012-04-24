@@ -27,13 +27,14 @@
         .logo_description
           Free E-Auction System
         .empty
-        %hr
       #navigation
         -if current_user
           = render_navigation
+        %hr
       - flash.each do |name, msg|
         #flash_message
           = content_tag :div, msg, :class => "#{name}" if msg.is_a?(String)
+
       #content
         = yield
 :javascript

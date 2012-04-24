@@ -13,8 +13,8 @@ body.bp
   background: #ffffff
 
 #header
-  margin-bottom: 20px
   background: #e6fcff
+  height: 150px
   .logo
     +column(5)
     font-family: 'Jockey One', sans-serif
@@ -28,8 +28,7 @@ body.bp
     +column(24,last)
     font-family: 'Nova Mono', cursive
     font-size: 18px
-  hr
-    +colruler(#000fff)
+
 
 .login_form
   +column(15)
@@ -45,6 +44,7 @@ body.bp
     width: 950px
     height: 50px
     font-size: 2.0em
+    margin: 0
     li
       display: inline-block
       margin: 5px 5px
@@ -54,6 +54,9 @@ body.bp
         color: white
       a.selected
         font-weight: bold
+  hr
+    +colruler(#000fff)
+
 #content
   margin: 0 10px
   table
