@@ -3,10 +3,11 @@ class Ability
 
   def initialize(user)
     if user.admin?
-      can :manage, User, :all
+      can :manage, User
     elsif user.creator?
       can :create, User, :all
-      can :update, User, :if => parent == user || id == user.id
+      can :update, User, :all
+      can :read, User
     elsif user.competitor?
     end
     # Define abilities for the passed in user here. For example:
