@@ -43,4 +43,13 @@ class User < ActiveRecord::Base
     role == ROLES[:competitor_viewer]
   end
 
+  def able_roles
+    #admin can register admin, creator, competitor
+    if admin?
+      return {:admin => I18n.t("users.admin"), :creator => I18n.t("users.creator"), :competitor => I18n.t("users.competitor")}
+    #creator can register creator, competitor
+    elsif creator?
+      return {:creator => I18n.t("users.creator"), :competitor => I18n.t("users.competitor")}
+    end
+  end
 end

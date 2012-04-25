@@ -15,5 +15,10 @@
     = f.label t('.password_confirmation')
     %br/
     = f.password_field :password_confirmation
+  %div
+    = f.label t('.choose_role')
+    = f.select(:role, options_for_select(current_user.able_roles.invert))
+  = hidden_field_tag "user[parent_id]", current_user.id
+  - Rails.logger.info "#{resource.inspect}"
   %div= f.submit t(".register")
 -#= render "links"

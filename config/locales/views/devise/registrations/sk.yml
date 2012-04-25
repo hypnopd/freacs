@@ -6,6 +6,7 @@ sk:
         admin_registration: Regitrácia administrátora
         password_confirmation: Potvrdenie hesla
         register: Registruj
+        choose_role: Vyber rolu
       edit:
         edit: Editácia %{resource_name}
         password: Heslo

@@ -1,5 +1,10 @@
 sk:
   users:
+    admin: Administrátor
+    creator: Vyhlasovateľ
+    creator_viewer: Pozorovateľ vyhlasovateľa
+    competitor: Súťažiaci
+    competitor_viewer: Pozorovateľ súťažiaceho
     index:
       new_user: Nový Používateľ
     users: Používatelia
