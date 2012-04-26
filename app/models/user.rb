@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def has_name?
+    name || surname
+  end
+
   def admin?
     role == ROLES[:admin]
   end
