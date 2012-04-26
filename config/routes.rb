@@ -1,5 +1,6 @@
 Freacs::Application.routes.draw do
 
+
   devise_for :users,
     :controllers => {:registrations => "registrations"},
     :path_names => {
@@ -10,6 +11,7 @@ Freacs::Application.routes.draw do
 
   resources :users, :only => [:index, :show]
   resource :home, :only => [:index, :welcome]
+  resources :companies
 
   authenticated :user do
       root :to => "home#index"
