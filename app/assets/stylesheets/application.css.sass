@@ -1,3 +1,4 @@
+
 // Include some nice mixins
 //@import "compass/css3"
 @import "sassybuttons"
@@ -14,29 +15,28 @@ body.bp
 
 #header
   background: #e6fcff
-  height: 150px
+
+  +column(24)
   .logo
-    +column(5)
-    font-family: 'Jockey One', sans-serif
-    font-size: 60px
+    +prepend(0.5)
+    +column(9)
+    font-family: 'Jockey One',sans-serif
+    font-size: 4.5em
   .clock
-    +prepend(15)
-    +column(4,last)
-    height: 90px
-    font-size: 3em
+    +prepend(12)
+    +column(2,true)
+    font-size: 1.5em
   .logo_description
-    +column(24,last)
+    +push(0.5)
+    +column(23.5)
     font-family: 'Nova Mono', cursive
-    font-size: 18px
-
-
-.login_form
-  +column(15)
+    font-size: 1.3em
 
 #flash_message
   font-weight: bold
 
 #navigation
+  +column(24)
   ul
     padding: 0
     list-style: none
@@ -64,14 +64,21 @@ body.bp
   form
     +blueprint-form
     +blueprint-form-borders
-
+    +blueprint-form-layout
+    +push(7)
+    +column(12)
+  h2
+    +column(23)
+    background: #569dff
 #infobar
-  +column(24)
+  height: 18px
+  +column(24,true)
+  +last
   background: #407880
   color: #ffffff
 
   > a
-    +column(5,last)
+    +column(5,true)
     text-decoration: none
     color: inherit
     font-weight: bold
