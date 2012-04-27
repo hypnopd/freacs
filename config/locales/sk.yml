@@ -202,3 +202,7 @@ sk:
   edit: Uprav
   cancan:
     not_authorized: Neopravnený prístup, nemáte práva na akciu!
+  actions: Akcie
+  yes: Áno
+  no: Nie
+  email: E-mail

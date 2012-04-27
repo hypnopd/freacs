@@ -22,11 +22,11 @@
         -else
           = link_to t("login_user"), new_user_session_path
       #header
-        .logo F3AcS
+        .logo
+          %span F3AcS
         .clock
         .logo_description
-          Free E-Auction System
-        .empty
+          %span Free E-Auction System
       #navigation
         -if current_user
           = render_navigation

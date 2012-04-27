@@ -1,5 +1,5 @@
-%h1
+%h2
   -if @user.has_name?
-    ="#{@user.name} #{@user.surname}"
+    = "#{@user.name} #{@user.surname}"
   -else
-    =@user.email
+    = "#{@user.email}"

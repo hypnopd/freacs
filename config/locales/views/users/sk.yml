@@ -7,4 +7,6 @@ sk:
     competitor_viewer: Pozorovateľ súťažiaceho
     index:
       new_user: Nový Používateľ
+      actions: Akcie
+      confirmed: Potvrdený?
     users: Používatelia
