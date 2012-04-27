@@ -6,11 +6,11 @@
   %div
     = f.label :email
     %br/
-    = f.email_field :email
+    = f.email_field :email, :required => true
   %div
     = f.label t(".password")
     %br/
-    = f.password_field :password
+    = f.password_field :password, :required => true
   %div
     = f.label t('.password_confirmation')
     %br/
@@ -18,6 +18,9 @@
   %div
     = f.label t('.choose_role')
     = f.select(:role, options_for_select(current_user.able_roles.invert))
+  %div
+    = f.label t(".company")
+    = f.select :company, options_for_select([["#{current_user.company.name}","#{current_user.company.id}"]])
   = hidden_field_tag "user[parent_id]", current_user.id
   - Rails.logger.info "#{resource.inspect}"
   %div= f.submit t(".register")

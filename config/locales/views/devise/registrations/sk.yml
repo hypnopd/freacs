@@ -7,6 +7,7 @@ sk:
         password_confirmation: Potvrdenie hesla
         register: Registruj
         choose_role: Rola
+        company: Spoločnosť
       edit:
         edit: Editácia %{resource_name}
         password: Heslo
