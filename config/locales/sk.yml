@@ -212,3 +212,6 @@ sk:
   actions: Akcie
   yes: Áno
   no: Nie
+  yes: Áno
+  no: Nie
+  email: E-mail
