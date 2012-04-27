@@ -209,3 +209,6 @@ sk:
   delete_confirmation: Ste si istý že chcete zmazať záznam?
   deleted: Záznam bol zmazaný!
   not_deleted: Záznam sa nepodarilo zmazať!
+  actions: Akcie
+  yes: Áno
+  no: Nie

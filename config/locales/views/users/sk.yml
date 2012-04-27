@@ -21,3 +21,7 @@ sk:
     show:
       yes: Áno
       no: Nie
+      actions: Akcie
+      confirmed: Potvrdený?
+    users: Používatelia
+    user: Používateľ
