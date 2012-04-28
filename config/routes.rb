@@ -1,15 +1,7 @@
 Freacs::Application.routes.draw do
 
 
-  resources :invitations
 
-  resources :offers
-
-  resources :conditions
-
-  resources :items
-
-  resources :auctions
 
   devise_for :users,
     :controllers => {:registrations => "registrations"},
@@ -22,6 +14,11 @@ Freacs::Application.routes.draw do
   resources :users, :only => [:index, :show, :destroy]
   resource :home, :only => [:index, :welcome]
   resources :companies
+  resources :invitations
+  resources :offers, :except => [:destroy, :update, :edit]
+  resources :conditions
+  resources :items
+  resources :auctions
 
   authenticated :user do
       root :to => "home#index"
