@@ -9,7 +9,7 @@ Freacs::Application.routes.draw do
         :sign_up => "register"
     }
 
-  resources :users, :only => [:index, :show]
+  resources :users, :only => [:index, :show, :destroy]
   resource :home, :only => [:index, :welcome]
   resources :companies
 

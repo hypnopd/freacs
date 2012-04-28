@@ -24,7 +24,7 @@ admin = User.create! :email => "admin@admin.com",
                      :password_confirmation => "admin11",
                      :confirmed_at => DateTime.now,
                      :role => User::ROLES[:admin],
-                     :company => default_company
+                     :company_id => default_company
 #default creator user
 puts "Creation of Creator user"
 creator = User.create! :email => "creator@creator.com",
@@ -32,7 +32,7 @@ creator = User.create! :email => "creator@creator.com",
                        :password_confirmation => "creator11",
                        :confirmed_at => DateTime.now,
                        :role => User::ROLES[:creator],
-                       :company => default_company
+                       :company_id => default_company
 creator.update_attribute :parent, admin
 puts "Created Creator user: " << creator.email
 
@@ -43,7 +43,7 @@ competitor = User.create! :email => "comp@comp.com",
                           :password_confirmation => "comp11",
                           :confirmed_at => DateTime.now,
                           :role => User::ROLES[:competitor],
-                          :company => wannawin
+                          :company_id => wannawin
 competitor.update_attribute :parent, admin
 puts "Created Competitor user: " << competitor.email
 
@@ -54,7 +54,7 @@ creator_viewer = User.create! :email => "viewercr@viewercr.com",
                               :password_confirmation => "viewercr11",
                               :confirmed_at => DateTime.now,
                               :role => User::ROLES[:creator_viewer],
-                              :company => default_company
+                              :company_id => default_company
 creator_viewer.update_attribute :parent, admin
 puts "Created Creator_viewer user: " << creator_viewer.email
 
@@ -65,6 +65,6 @@ competitor_viewer = User.create! :email => "viewercomp@viewercomp.com",
                                  :password_confirmation => "viewercomp11",
                                  :confirmed_at => DateTime.now,
                                  :role => User::ROLES[:competitor_viewer],
-                                                      :company => wannawin
+                                                      :company_id => wannawin
 competitor_viewer.update_attribute :parent, admin
 puts "Created Competitor_viewer user: " << competitor_viewer.email

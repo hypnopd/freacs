@@ -9,9 +9,10 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Nova+Mono'
     /[if lt IE 8]
       = stylesheet_link_tag 'compass/ie.css', :media => 'screen, projection'
-      = csrf_meta_tag
     = javascript_include_tag "application"
     = javascript_include_tag "jquery.jclock.js"
+    = csrf_meta_tag
+
   %body.bp
     #container
       #infobar
