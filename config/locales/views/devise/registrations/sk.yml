@@ -8,6 +8,7 @@ sk:
         register: Registruj
         choose_role: Rola
         company: Spoločnosť
+        company_not_exist: (Ak spoločnosť neexistuje, pokračuj na
       edit:
         edit: Editácia %{resource_name}
         password: Heslo
