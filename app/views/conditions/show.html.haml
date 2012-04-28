@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @condition.name
+%p
+  %b Type:
+  = @condition.type
+%p
+  %b Percentage:
+  = @condition.percentage
+
+= link_to 'Edit', edit_condition_path(@condition)
+\|
+= link_to 'Back', conditions_path

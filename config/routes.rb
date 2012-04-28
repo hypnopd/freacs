@@ -1,6 +1,8 @@
 Freacs::Application.routes.draw do
 
 
+  resources :conditions
+
   resources :items
 
   resources :auctions

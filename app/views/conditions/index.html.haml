@@ -1,0 +1,23 @@
+%h1 Listing conditions
+
+%table
+  %tr
+    %th Name
+    %th Type
+    %th Percentage
+    %th
+    %th
+    %th
+
+  - @conditions.each do |condition|
+    %tr
+      %td= condition.name
+      %td= condition.type
+      %td= condition.percentage
+      %td= link_to 'Show', condition
+      %td= link_to 'Edit', edit_condition_path(condition)
+      %td= link_to 'Destroy', condition, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Condition', new_condition_path
