@@ -1,17 +1,19 @@
-%h1 Listing companies
+%h2= t("companies.companies")
+= link_to t('companies.new_company'), new_company_path
 
-%table
-  %tr
-    %th
-    %th
-    %th
+-if @companies
+  %table
+    %thead
+      %tr
+        %th=t("companies.name")
+        %th=t(".users_count")
+        %th=t("actions")
+    %tbody
+      - @companies.each do |company|
+        %tr
+          %td= link_to company.name, company_path(company)
+          %td= company.users.count
+          %td
+            = link_to t('edit'), edit_company_path(company)
+            = link_to t('delete'), company, :confirm => t("delete_confirmation"), :method => :delete
 
-  - @companies.each do |company|
-    %tr
-      %td= link_to 'Show', company
-      %td= link_to 'Edit', edit_company_path(company)
-      %td= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Company', new_company_path

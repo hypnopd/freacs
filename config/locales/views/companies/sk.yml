@@ -3,3 +3,6 @@ sk:
     company: Spoločnosť
     companies: Spoločnosti
     new_company: Nová spoločnosť
+    name: Názov
+    index:
+      users_count: Počet používateľov
