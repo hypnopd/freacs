@@ -1,6 +1,8 @@
 Freacs::Application.routes.draw do
 
 
+  resources :items
+
   resources :auctions
 
   devise_for :users,
