@@ -1,6 +1,8 @@
 Freacs::Application.routes.draw do
 
 
+  resources :invitations
+
   resources :offers
 
   resources :conditions
