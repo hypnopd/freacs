@@ -2,4 +2,22 @@
   -if @user.has_name?
     = "#{@user.name} #{@user.surname}"
   -else
-    = "#{@user.email}"
+    =@user.email
+%dl
+  %dt=t("users.email")
+  %dd=@user.email
+  %dt=t("users.name")
+  %dd=@user.name
+  %dt=t("users.surname")
+  %dd=@user.surname
+  %dt=t("companies.company")
+  %dd=@user.company.name
+  %dt=t("role")
+  %dd=t("users.#{@user.role}")
+  %dt=t("users.confirmed")
+  %dd= @user.confirmed? ? t(".yes") : t(".no")
+  - if @user.confirmed?
+    %dt=t("users.confirmed_at")
+    %dd=@user.confirmed_at
+.actions
+  =link_to t('back'), :back

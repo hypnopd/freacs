@@ -5,9 +5,19 @@ sk:
     creator_viewer: Pozorovateľ vyhlasovateľa
     competitor: Súťažiaci
     competitor_viewer: Pozorovateľ súťažiaceho
+    users: Používatelia
+    user: Používateľ
+    email: E-mail
+    name: Meno
+    surname: Priezvisko
+    confirmed: Potvrdený?
+    confirmed_at: Potvrdený dňa
     index:
       new_user: Nový Používateľ
       actions: Akcie
       confirmed: Potvrdený?
     users: Používatelia
     user: Používateľ
+    show:
+      yes: Áno
+      no: Nie
