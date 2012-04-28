@@ -1,4 +1,26 @@
-%p#notice= notice
+%h2= @company.name
+
+%dl
+  %dt=t("companies.name")
+  %dd=@company.name
+  %dt=t("companies.ico")
+  %dd=@company.ico
+  %dt=t("companies.dic")
+  %dd=@company.dic
+  %dt=t("companies.address")
+  %dd=@company.address
+  %dt=t("companies.city")
+  %dd=@company.city
+  %dt=t("companies.phone")
+  %dd=@company.phone
+
+-if @users
+  %hr
+  %dl
+    %dt=t("users.users")
+    - @users.each do |user|
+      %dd
+        = link_to user.email, user_path(user)
 
 
 = link_to 'Edit', edit_company_path(@company)

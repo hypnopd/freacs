@@ -15,7 +15,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
-
+    @users = @company.users
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @company }
@@ -75,10 +75,10 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find(params[:id])
     @company.destroy
-
-    respond_to do |format|
-      format.html { redirect_to companies_url }
-      format.json { head :no_content }
+    if @company.destroyed?
+      redirect_to companies_path, :notice => t("deleted")
+    else
+      redirect_to companies_path, :alert => t("not_deleted")
     end
   end
 end
