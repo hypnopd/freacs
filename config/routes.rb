@@ -1,6 +1,8 @@
 Freacs::Application.routes.draw do
 
 
+  resources :auctions
+
   devise_for :users,
     :controllers => {:registrations => "registrations"},
     :path_names => {

@@ -1,0 +1,19 @@
+%h1 Listing auctions
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @auctions.each do |auction|
+    %tr
+      %td= auction.name
+      %td= link_to 'Show', auction
+      %td= link_to 'Edit', edit_auction_path(auction)
+      %td= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Auction', new_auction_path
