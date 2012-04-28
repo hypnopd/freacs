@@ -4,5 +4,10 @@ sk:
     companies: Spoločnosti
     new_company: Nová spoločnosť
     name: Názov
+    ico: IČO
+    dic: "DIČ"
+    address: Adresa
+    city: Mesto
+    phone: Telefón
     index:
       users_count: Počet používateľov
