@@ -1,19 +1,18 @@
-%h1 Listing auctions
+%h2=t("auctions.auctions")
+= link_to t('auctions.new_auction'), new_auction_path
+
 
 %table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
-  - @auctions.each do |auction|
+  %thead
     %tr
-      %td= auction.name
-      %td= link_to 'Show', auction
-      %td= link_to 'Edit', edit_auction_path(auction)
-      %td= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete
+      %th=t("auctions.name")
+      %th=t("actions")
 
-%br
-
-= link_to 'New Auction', new_auction_path
+  -if @auctions
+    %tbody
+      - @auctions.each do |auction|
+        %tr
+        %td= link_to auction.name, auction
+        %td
+          = link_to t('edit'), edit_auction_path(auction)
+          = link_to t('delete'), auction, :confirm => 'Are you sure?', :method => :delete
