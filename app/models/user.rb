@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :confirmed_at, :role, :company_id
   has_ancestry
   belongs_to :company
+  has_many :auction_users
+  has_many :auctions, :through => :auction_users
 
   ROLES = {:admin => "admin",
            :creator => "creator",
