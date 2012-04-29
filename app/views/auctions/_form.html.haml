@@ -1,13 +1,11 @@
 = form_for @auction do |f|
-  -if @auction.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@auction.errors.count, "error")} prohibited this auction from being saved:"
-      %ul
-        - @auction.errors.full_messages.each do |msg|
-          %li= msg
-
+  -unless @auction.errors.empty?
+    .error
+      - @auction.errors.full_messages.each do |msg|
+        %li= msg
   .field
     = f.label :name
+    %br/
     = f.text_field :name
   .actions
     = f.submit 'Save'
