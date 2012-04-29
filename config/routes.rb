@@ -12,10 +12,11 @@ Freacs::Application.routes.draw do
   resource :home, :only => [:index, :welcome]
   resources :companies
   resources :invitations
-  resources :offers, :except => [:destroy, :update, :edit]
-  resources :conditions
-  resources :items
-  resources :auctions
+  resources :auctions do
+    resources :offers, :except => [:destroy, :update, :edit]
+    resources :items
+    resources :conditions
+  end
 
   authenticated :user do
       root :to => "home#index"

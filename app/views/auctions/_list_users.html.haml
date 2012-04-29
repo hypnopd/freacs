@@ -1,0 +1,13 @@
+%h3=t("users.users")
+- if @auction.users
+  - @auction.users.each do |user|
+    %table
+      %thead
+        %tr
+          %th=t("users.email")
+      %tbody
+        %tr
+          %td= link_to user.email, user_path(user)
+%br/
+= link_to t(".add_user"), new_user_registration_path
+%hr

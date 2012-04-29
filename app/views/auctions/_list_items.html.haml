@@ -1,0 +1,13 @@
+%h3=t("items.items")
+- if @auction.items
+  - @auction.items.each do |item|
+    %table
+      %thead
+        %tr
+          %th=t("items.name")
+      %tbody
+        %tr
+          %td= link_to item.name, auction_item_path(@auction,item)
+%br/
+= link_to t(".add_item"), new_auction_item_path(@auction)
+%hr

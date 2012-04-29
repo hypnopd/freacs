@@ -4,7 +4,7 @@ class CreateConditions < ActiveRecord::Migration
       t.string :name
       t.string :type
       t.integer :percentage
-
+      t.references :auction
       t.timestamps
     end
   end

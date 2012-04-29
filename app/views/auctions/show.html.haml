@@ -1,9 +1,7 @@
-%p#notice= notice
+%h2=@auction.name
 
-%p
-  %b Name:
-  = @auction.name
+= render :partial => "list_users"
+= render :partial => "list_items"
+= render :partial => "list_conditions"
 
-= link_to 'Edit', edit_auction_path(@auction)
-\|
-= link_to 'Back', auctions_path
+= link_to t("back"), :back

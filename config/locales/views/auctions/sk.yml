@@ -4,3 +4,9 @@ sk:
     auctions: Aukcie
     new_auction: Nová aukcia
     name: Názov
+    list_users:
+      add_user: Pridaj používateľa
+    list_items:
+      add_item: Pridaj položku
+    list_conditions:
+      add_condition: Pridaj podmienku

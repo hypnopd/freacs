@@ -270,13 +270,16 @@ body.bp {
   margin-right: 10px;
   width: 910px;
   background: #569dff;
+  font-weight: bold;
+  color: #ffffe5;
+  padding-left: 5px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content h2 {
   overflow-x: hidden;
 }
 
-/* line 73, ../../app/assets/stylesheets/application.css.sass */
+/* line 76, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   height: 18px;
   display: inline;
@@ -291,7 +294,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 80, ../../app/assets/stylesheets/application.css.sass */
+/* line 83, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -306,7 +309,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 86, ../../app/assets/stylesheets/application.css.sass */
+/* line 89, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -317,11 +320,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 88, ../../app/assets/stylesheets/application.css.sass */
+/* line 91, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 90, ../../app/assets/stylesheets/application.css.sass */
+/* line 93, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
