@@ -16,6 +16,7 @@ Freacs::Application.routes.draw do
     resources :offers, :except => [:destroy, :update, :edit]
     resources :items
     resources :conditions
+    resources :auction_users
   end
 
   authenticated :user do

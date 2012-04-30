@@ -5,8 +5,9 @@ sk:
     new_auction: Nová aukcia
     name: Názov
     list_users:
-      add_user: Pridaj používateľa
+      add_user: Pridaj nového používateľa
+      add_exist_users: Pridaj existujúceho používateľa
     list_items:
-      add_item: Pridaj položku
+      add_item: Pridaj novú položku
     list_conditions:
-      add_condition: Pridaj podmienku
+      add_condition: Pridaj novú podmienku
