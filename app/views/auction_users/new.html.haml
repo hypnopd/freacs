@@ -1,0 +1,14 @@
+%h2=t(".add_users_to", :auction_name => @auction.name)
+
+%h3=t(".exists_users")
+.form
+  - if @users
+    = form_tag ({:controller => "auction_users", :action => "create"}) do
+      - @users.each do |user|
+        = check_box_tag "users[]", "#{user.id}"
+        = label_tag "name", "#{user.email}"
+        %br/
+      = submit_tag t("save")
+
+.links
+= link_to t(".register_new_user"), new_user_registration_path

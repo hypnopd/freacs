@@ -1,0 +1,9 @@
+sk:
+  auction_users:
+    new:
+      add_users_to: Pridanie používateľov pre aukciu %{auction_name}
+      exists_users: Existujúci používatelia
+      register_new_user: Registruj nového používateľa
+    flash:
+      alert:
+        no_users: Neboli označení žiadny používatelia
