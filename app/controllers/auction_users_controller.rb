@@ -17,6 +17,12 @@ class AuctionUsersController < ApplicationController
   end
 
   def destroy
-    @auction_user = AuctionUser.find(:user_id =>params[:user][:id], :auction_id => params[:auction_id])
+    @auction_user = AuctionUser.find(params[:id])
+    @auction_user.destroy
+    if @auction_user.destroyed?
+      redirect_to auction_path(params[:auction_id]), :notice => t("deleted")
+    else
+      redirect_to auction_path(params[:auction_id]), :alert => t("not_deleted")
+    end
   end
 end

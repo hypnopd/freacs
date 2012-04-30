@@ -14,7 +14,7 @@ class AuctionsController < ApplicationController
   # GET /auctions/1.json
   def show
     @auction = Auction.find(params[:id])
-
+    @auction_users = AuctionUser.find_all_by_auction_id(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @auction }

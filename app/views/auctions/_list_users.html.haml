@@ -1,5 +1,5 @@
 %h3=t("users.users")
-- if @auction.users
+- if @auction_users
   %table
     %thead
       %tr
@@ -7,11 +7,11 @@
         %th=t("companies.company")
         %th=t("actions")
     %tbody
-      - @auction.users.each do |user|
+      - @auction_users.each do |user|
         %tr
-          %td= link_to user.email, user_path(user)
-          %td= user.company.name
-          %td= link_to t("delete"), auction_auction_user_path(user), :method => :delete, :confirm => t("delete_confirmation")
+          %td= link_to user.user.email, user_path(user.user)
+          %td= user.user.company.name
+          %td= link_to t("delete"), auction_auction_user_path(@auction, user), :method => :delete, :confirm => t("delete_confirmation")
 %br/
 = link_to t(".add_exist_users"), new_auction_auction_user_path(@auction)
 = link_to t(".add_user"), new_user_registration_path
