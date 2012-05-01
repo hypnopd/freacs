@@ -1,5 +1,6 @@
 %h2=t("auctions.auctions")
-= link_to t('auctions.new_auction'), new_auction_path
+- if can? :create, Auction
+  = link_to t('auctions.new_auction'), new_auction_path
 
 
 %table

@@ -31,9 +31,9 @@ puts "Created Admin user: " << admin.email
 
 #default creator user
 puts "Creation of Creator user"
-creator = User.create! :email => "creator@creator.com",
-                       :password => "creator11",
-                       :password_confirmation => "creator11",
+creator = User.create! :email => "cret@cret.com",
+                       :password => "cret11",
+                       :password_confirmation => "cret11",
                        :confirmed_at => DateTime.now,
                        :role => User::ROLES[:creator],
                        :company => default_company
@@ -53,9 +53,9 @@ puts "Created Competitor user: " << competitor.email
 
 #default creator_viewer user
 puts "Creation of Creator_viewer user"
-creator_viewer = User.create! :email => "viewercr@viewercr.com",
-                              :password => "viewercr11",
-                              :password_confirmation => "viewercr11",
+creator_viewer = User.create! :email => "vcrt@vcrt.com",
+                              :password => "vcrt11",
+                              :password_confirmation => "vcrt11",
                               :confirmed_at => DateTime.now,
                               :role => User::ROLES[:creator_viewer],
                               :company => default_company
@@ -64,9 +64,9 @@ puts "Created Creator_viewer user: " << creator_viewer.email
 
 #default competitor_viewer user
 puts "Creation of Competitor_viewer user"
-competitor_viewer = User.create! :email => "viewercomp@viewercomp.com",
-                                 :password => "viewercomp11",
-                                 :password_confirmation => "viewercomp11",
+competitor_viewer = User.create! :email => "vcomp@vcomp.com",
+                                 :password => "vcomp11",
+                                 :password_confirmation => "vcomp11",
                                  :confirmed_at => DateTime.now,
                                  :role => User::ROLES[:competitor_viewer],
                                  :company => wannawin
