@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
+
   # GET /items
   # GET /items.json
   def index
@@ -24,7 +27,8 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.json
   def new
-    @item = Item.new
+    @auction = Auction.find params[:auction_id]
+    @item = Item.new(:auction => @auction)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,10 +45,11 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
-
+    @auction = Auction.find params[:auction_id]
+    @item.auction = @auction
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to auction_path(@auction), notice: t("items.flash.notice.created") }
         format.json { render json: @item, status: :created, location: @item }
       else
         format.html { render action: "new" }

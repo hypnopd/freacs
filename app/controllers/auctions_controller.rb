@@ -1,9 +1,12 @@
 class AuctionsController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
+
   # GET /auctions
   # GET /auctions.json
   def index
     @auctions = Auction.all
-
+    puts "!!!#{@auctions.inspect}"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @auctions }

@@ -3,3 +3,10 @@ sk:
     item: Položka
     items: Položky
     name: Názov
+    unit: Jednotka
+    amount: Množstvo
+    new:
+      new_item: Nová položka
+    flash:
+      notice:
+        created: Položka bola vytvorená

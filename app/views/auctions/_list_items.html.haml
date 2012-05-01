@@ -1,13 +1,23 @@
 %h3=t("items.items")
 - if @auction.items
-  - @auction.items.each do |item|
-    %table
-      %thead
-        %tr
-          %th=t("items.name")
-      %tbody
+  %table
+    %thead
+      %tr
+        %th=t("items.name")
+        %th=t("items.unit")
+        %th=t("items.amount")
+        - if can? [:update, :destroy], Item
+          %th=t("actions")
+    %tbody
+      - @auction.items.each do |item|
         %tr
           %td= link_to item.name, auction_item_path(@auction,item)
+          %td= item.unit
+          %td= item.amount
+          - if can? [:update, :destroy], Item
+            %td
+              = link_to t("edit"), edit_auction_item_path(@auction, item)
+              = link_to t("delete"), auction_item_path(@auction, item), :method => :delete, :confirm => t("delete_confirmation")
 %br/
 = link_to t(".add_item"), new_auction_item_path(@auction)
 %hr

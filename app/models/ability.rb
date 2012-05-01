@@ -8,15 +8,19 @@ class Ability
       can [:create, :update, :read], User
       cannot :read, User, :role => "admin"
       cannot :destroy, User
-      can :manage, AuctionUser
+      can :manage, [AuctionUser, Auction, Item]
     elsif user.competitor?
       can [:create,:read], User
       cannot :manage, [AuctionUser, Company]
+      cannot [:create,:update, :destroy], [Auction, Item]
     elsif user.creator_viewer?
       cannot [:create, :update, :destroy], :all
     elsif user.competitor_viewer?
-      cannot [:create, :update, :destroy], :all
-      cannot :manage, [User, AuctionUser, Company]
+      can :read, Auction do |auction|
+        auction.users.include?(user)
+      end
+      #cannot [:create, :update, :destroy], :all
+      #cannot :manage, [User, Company]
     end
     # Define abilities for the passed in user here. For example:
     #
