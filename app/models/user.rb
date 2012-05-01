@@ -62,4 +62,15 @@ class User < ActiveRecord::Base
       {:competitor_viewer => I18n.t("users.competitor_viewer")}
     end
   end
+
+  def able_companies
+    result = []
+    if admin?
+      Company.all.each{|c| result << [c.name,"#{c.id}"] }
+      puts "#{result}"
+    elsif creator?
+    elsif competitor?
+    end
+    result
+  end
 end

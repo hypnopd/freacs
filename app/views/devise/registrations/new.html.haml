@@ -20,7 +20,11 @@
     = f.select(:role, options_for_select(current_user.able_roles.invert))
   %div
     = f.label t(".company")
-    = f.select :company_id, options_for_select([["#{current_user.company.name}","#{current_user.company.id}"]])
+    = puts "#{current_user.able_companies}"
+    - unless current_user.competitor?
+      = f.select(:company_id, options_for_select(current_user.able_companies))
+    - else
+      = f.select(:company_id, [["#{current_user.company.name}","#{current_user.company.id}"]])
     %br/
     = t(".company_not_exist")
     = link_to t("companies.new_company"), new_company_path
