@@ -23,5 +23,6 @@ sk:
       no: Nie
       actions: Akcie
       confirmed: Potvrdený?
+      register_user: Registrátor
     users: Používatelia
     user: Používateľ

@@ -19,5 +19,10 @@
   - if @user.confirmed?
     %dt=t("users.confirmed_at")
     %dd=@user.confirmed_at
+  %dt=t(".register_user")
+  - unless current_user.admin? || current_user.creator?
+    %dd= @user.parent.email
+  - else
+    %dd= link_to "#{@user.parent.email}", user_path(@user.parent)
 .actions
   =link_to t('back'), :back
