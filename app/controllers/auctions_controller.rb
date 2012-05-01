@@ -44,7 +44,7 @@ class AuctionsController < ApplicationController
 
     respond_to do |format|
       if @auction.save
-        format.html { redirect_to @auction, notice: 'Auction was successfully created.' }
+        format.html { redirect_to @auction, notice: t('auctions.flash.notice.created') }
         format.json { render json: @auction, status: :created, location: @auction }
       else
         format.html { render action: "new" }
@@ -75,9 +75,11 @@ class AuctionsController < ApplicationController
     @auction = Auction.find(params[:id])
     @auction.destroy
 
-    respond_to do |format|
-      format.html { redirect_to auctions_url }
-      format.json { head :no_content }
+    if @auction.destroyed?
+      redirect_to auctions_path, notice: t("deleted")
+    else
+      redirect_to auctions_path, alert: t("not_deleted")
     end
   end
+
 end

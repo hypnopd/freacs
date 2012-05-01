@@ -7,3 +7,7 @@ sk:
     flash:
       alert:
         no_users: Neboli označení žiadny používatelia
+      notice:
+        add_users:
+         one: Používateľ bol pridaný do aukcie
+         other: Používatelia boli pridaní aukcie

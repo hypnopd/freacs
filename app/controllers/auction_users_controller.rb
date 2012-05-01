@@ -7,9 +7,11 @@ class AuctionUsersController < ApplicationController
   def create
     if params[:users]
       params[:users].each do |user_id|
-        AuctionUser.create!(:user_id=>user_id, :auction_id => params[:auction_id])
+        begin
+          AuctionUser.create!(:user_id=>user_id, :auction_id => params[:auction_id])
+        end
       end
-      redirect_to auction_path(params[:auction_id])
+      redirect_to auction_path(params[:auction_id]), :notice => t("auction_users.flash.notice.add_users", :count => params[:users].count)
     else
       @auction = Auction.find params[:auction_id]
       redirect_to new_auction_auction_user_path(@auction), :alert => t("auction_users.flash.alert.no_users")
