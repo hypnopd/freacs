@@ -5,10 +5,18 @@ class Ability
     if user.admin?
       can :manage, :all
     elsif user.creator?
-      can :create, User, :all
-      can :update, User, :all
-      can :read, User
+      can [:create, :update, :read], User
+      cannot :read, User, :role => "admin"
+      cannot :destroy, User
+      can :manage, AuctionUser
     elsif user.competitor?
+      can [:create,:read], User
+      cannot :manage, [AuctionUser, Company]
+    elsif user.creator_viewer?
+      cannot [:create, :update, :destroy], :all
+    elsif user.competitor_viewer?
+      cannot [:create, :update, :destroy], :all
+      cannot :manage, [User, AuctionUser, Company]
     end
     # Define abilities for the passed in user here. For example:
     #

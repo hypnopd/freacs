@@ -3,10 +3,10 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    if current_user.admin?
-      @users = User.all
-    elsif current_user.creator? || current_user.competitor?
+    if current_user.competitor?
       @users = current_user.children
+    else
+      @users = User.accessible_by(current_ability, :read)
     end
   end
 

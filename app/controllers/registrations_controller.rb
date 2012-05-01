@@ -10,7 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def check_create_permissions
     if current_user
-      unless current_user.admin? || current_user.creator?
+      unless current_user.admin? || current_user.creator? || current_user.competitor?
         raise CanCan::AccessDenied
       end
     else
