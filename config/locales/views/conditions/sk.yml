@@ -1,5 +1,7 @@
 sk:
   conditions:
-    condition: Požiadavka
-    conditions: Požiadavky
+    condition: Podmienka
+    conditions: Podmienky
     name: Názov
+    new:
+      new_condition: Nová podmienka

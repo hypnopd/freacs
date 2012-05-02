@@ -25,6 +25,7 @@ class ConditionsController < ApplicationController
   # GET /conditions/new.json
   def new
     @condition = Condition.new
+    @auction = Auction.find params[:auction_id]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,16 +36,19 @@ class ConditionsController < ApplicationController
   # GET /conditions/1/edit
   def edit
     @condition = Condition.find(params[:id])
+    @auction = Auction.find params[:auction_id]
+
   end
 
   # POST /conditions
   # POST /conditions.json
   def create
     @condition = Condition.new(params[:condition])
+    @auction = Auction.find params[:auction_id]
 
     respond_to do |format|
       if @condition.save
-        format.html { redirect_to @condition, notice: 'Condition was successfully created.' }
+        format.html { redirect_to @auction, notice: t('conditions.flash.notice.created') }
         format.json { render json: @condition, status: :created, location: @condition }
       else
         format.html { render action: "new" }
@@ -57,10 +61,11 @@ class ConditionsController < ApplicationController
   # PUT /conditions/1.json
   def update
     @condition = Condition.find(params[:id])
+    @auction = Auction.find params[:auction_id]
 
     respond_to do |format|
       if @condition.update_attributes(params[:condition])
-        format.html { redirect_to @condition, notice: 'Condition was successfully updated.' }
+        format.html { redirect_to @auction, notice: t("conditions.flash.notice.updated") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -74,10 +79,12 @@ class ConditionsController < ApplicationController
   def destroy
     @condition = Condition.find(params[:id])
     @condition.destroy
+    @auction = Auction.find params[:auction_id]
 
-    respond_to do |format|
-      format.html { redirect_to conditions_url }
-      format.json { head :no_content }
+    if @condition.destroyed?
+      redirect_to @auction, :notice => t("deleted")
+    else
+      redirect_to @auction, :notice => t("not_deleted")
     end
   end
 end
