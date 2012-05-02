@@ -15,5 +15,7 @@
         %tr
         %td= link_to auction.name, auction
         %td
-          = link_to t('edit'), edit_auction_path(auction)
-          = link_to t('delete'), auction, :confirm => 'Are you sure?', :method => :delete
+          -if can? :update, auction
+            = link_to t('edit'), edit_auction_path(auction)
+          -if can? :destroy, auction
+            = link_to t('delete'), auction, :confirm => 'Are you sure?', :method => :delete

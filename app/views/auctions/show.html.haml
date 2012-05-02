@@ -1,6 +1,8 @@
 %h2=@auction.name
 
-= render :partial => "list_users"
+-if can? :read, AuctionUser
+  = render :partial => "list_users"
+
 = render :partial => "list_items"
 = render :partial => "list_conditions"
 

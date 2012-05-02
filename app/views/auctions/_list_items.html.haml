@@ -16,8 +16,11 @@
           %td= item.amount
           - if can? [:update, :destroy], Item
             %td
-              = link_to t("edit"), edit_auction_item_path(@auction, item)
-              = link_to t("delete"), auction_item_path(@auction, item), :method => :delete, :confirm => t("delete_confirmation")
+              - if can? :edit, Item
+                = link_to t("edit"), edit_auction_item_path(@auction, item)
+              -if can? :destroy, Item
+                = link_to t("delete"), auction_item_path(@auction, item), :method => :delete, :confirm => t("delete_confirmation")
 %br/
-= link_to t(".add_item"), new_auction_item_path(@auction)
+- if can? :create, Item
+  = link_to t(".add_item"), new_auction_item_path(@auction)
 %hr

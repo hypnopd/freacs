@@ -5,8 +5,12 @@ class AuctionsController < ApplicationController
   # GET /auctions
   # GET /auctions.json
   def index
-    @auctions = Auction.all
-    puts "!!!#{@auctions.inspect}"
+    if current_user.admin? || current_user.creator?
+      @auctions = Auction.all
+    else
+      @auctions = current_user.auctions
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @auctions }
