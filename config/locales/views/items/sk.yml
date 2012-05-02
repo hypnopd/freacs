@@ -7,6 +7,9 @@ sk:
     amount: Množstvo
     new:
       new_item: Nová položka
+    edit:
+      edit: Úprava položky %{name}
     flash:
       notice:
         created: Položka bola vytvorená
+        updated: Položka bola upravená

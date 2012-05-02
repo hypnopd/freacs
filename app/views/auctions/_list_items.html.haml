@@ -1,5 +1,5 @@
 %h3=t("items.items")
-- if @auction.items
+- unless @auction.items.empty?
   %table
     %thead
       %tr

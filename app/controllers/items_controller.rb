@@ -39,6 +39,7 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
     @item = Item.find(params[:id])
+    @auction =Auction.find params[:auction_id]
   end
 
   # POST /items
@@ -62,10 +63,11 @@ class ItemsController < ApplicationController
   # PUT /items/1.json
   def update
     @item = Item.find(params[:id])
+    @auction = Auction.find params[:auction_id]
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to @auction, notice: t("items.flash.notice.updated") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -79,10 +81,12 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
+    @auction = Auction.find params[:auction_id]
 
-    respond_to do |format|
-      format.html { redirect_to items_url }
-      format.json { head :no_content }
+    if @item.destroyed?
+      redirect_to auction_path(@auction), :notice => t("deleted")
+    else
+      redirect_to auction_path(@auction), :alert => t("not_deleted")
     end
   end
 end

@@ -8,11 +8,12 @@ class Ability
       can [:create, :update, :read], User
       cannot :read, User, :role => "admin"
       cannot :destroy, User
-      can :manage, [AuctionUser, Auction, Item]
+      can :manage, [AuctionUser, Auction, Item, Condition]
     elsif user.competitor?
       can [:create,:read], User
+      can :read, [Auction, Item, Condition]
       cannot :manage, [AuctionUser, Company]
-      cannot [:create,:update, :destroy], [Auction, Item]
+      cannot [:create,:update, :destroy], [Auction, Item, Condition]
     elsif user.creator_viewer?
       cannot [:create, :update, :destroy], :all
     elsif user.competitor_viewer?

@@ -1,5 +1,5 @@
 %h3=t("conditions.conditions")
-- if @auction.conditions
+- unless @auction.conditions
   - @auction.conditions.each do |condition|
     %table
       %thead
@@ -9,5 +9,6 @@
         %tr
           %td= link_to condition.name, auction_condition_path(@auction,condition)
 %br/
-= link_to t(".add_condition"), new_auction_condition_path(@auction)
+-if can? :create, Condition
+  = link_to t(".add_condition"), new_auction_condition_path(@auction)
 %hr
