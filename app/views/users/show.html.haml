@@ -26,3 +26,8 @@
     %dd= link_to "#{@user.parent.email}", user_path(@user.parent)
 .actions
   =link_to t('back'), :back
+- if can? :update, @user
+  .edit_destroy
+    = link_to t("edit"), edit_user_registration_path(@user)
+    - if can? :destroy, @user
+      = link_to t("delete"), user_registration_path(@user), :confirm => t("delete_confirmation")

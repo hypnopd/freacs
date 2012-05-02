@@ -1,7 +1,5 @@
-%h1 Editing item
+%h2=@item.name
 
 = render 'form'
 
-= link_to 'Show', @item
-\|
-= link_to 'Back', items_path
+= link_to t('back'), :back
