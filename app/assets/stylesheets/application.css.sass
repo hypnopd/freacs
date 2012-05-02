@@ -16,7 +16,7 @@ body.bp
 #header
   background: #e6fcff
 
-  +column(24)
+  +column(24,true)
   .logo
     +prepend(0.5)
     +column(9)
@@ -36,7 +36,7 @@ body.bp
   font-weight: bold
 
 #navigation
-  +column(24)
+  +column(24,true)
   ul
     padding: 0
     list-style: none
@@ -58,7 +58,8 @@ body.bp
     +colruler(#000fff)
 
 #content
-  margin: 0 10px
+  +column(23,true)
+  padding-left: 20px
   table
     margin: 15px 0
   form
@@ -68,11 +69,25 @@ body.bp
     +push(7)
     +column(12)
   h2
-    +column(23)
+    +column(23,true)
     background: #569dff
     font-weight: bold
     color: #ffffe5
     padding-left: 5px
+
+  .actions
+    +column(1)
+
+  .edit_destroy
+    +prepend(19)
+    +column(3,true)
+#footer
+  +column(23)
+  padding-left: 20px
+  height: 10px
+  hr
+    color: #ffffe5
+
 #infobar
   height: 18px
   +column(24,true)

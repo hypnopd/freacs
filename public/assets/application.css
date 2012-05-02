@@ -18,7 +18,7 @@ body.bp {
   background: #e6fcff;
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 0;
   width: 950px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -79,7 +79,7 @@ body.bp {
 #navigation {
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 0;
   width: 950px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -127,13 +127,21 @@ body.bp {
 
 /* line 60, ../../app/assets/stylesheets/application.css.sass */
 #content {
-  margin: 0 10px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 910px;
+  padding-left: 20px;
 }
-/* line 62, ../../app/assets/stylesheets/application.css.sass */
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content {
+  overflow-x: hidden;
+}
+/* line 63, ../../app/assets/stylesheets/application.css.sass */
 #content table {
   margin: 15px 0;
 }
-/* line 64, ../../app/assets/stylesheets/application.css.sass */
+/* line 65, ../../app/assets/stylesheets/application.css.sass */
 #content form {
   display: inline;
   float: left;
@@ -263,11 +271,11 @@ body.bp {
 * html #content form {
   overflow-x: hidden;
 }
-/* line 70, ../../app/assets/stylesheets/application.css.sass */
+/* line 71, ../../app/assets/stylesheets/application.css.sass */
 #content h2 {
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 0;
   width: 910px;
   background: #569dff;
   font-weight: bold;
@@ -278,8 +286,49 @@ body.bp {
 * html #content h2 {
   overflow-x: hidden;
 }
+/* line 78, ../../app/assets/stylesheets/application.css.sass */
+#content .actions {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content .actions {
+  overflow-x: hidden;
+}
+/* line 81, ../../app/assets/stylesheets/application.css.sass */
+#content .edit_destroy {
+  padding-left: 760px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 110px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content .edit_destroy {
+  overflow-x: hidden;
+}
 
-/* line 76, ../../app/assets/stylesheets/application.css.sass */
+/* line 84, ../../app/assets/stylesheets/application.css.sass */
+#footer {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 910px;
+  padding-left: 20px;
+  height: 10px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #footer {
+  overflow-x: hidden;
+}
+/* line 88, ../../app/assets/stylesheets/application.css.sass */
+#footer hr {
+  color: #ffffe5;
+}
+
+/* line 91, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   height: 18px;
   display: inline;
@@ -294,7 +343,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 83, ../../app/assets/stylesheets/application.css.sass */
+/* line 98, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -309,7 +358,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 89, ../../app/assets/stylesheets/application.css.sass */
+/* line 104, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -320,11 +369,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 91, ../../app/assets/stylesheets/application.css.sass */
+/* line 106, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 93, ../../app/assets/stylesheets/application.css.sass */
+/* line 108, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
