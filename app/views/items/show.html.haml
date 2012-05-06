@@ -1,20 +1,22 @@
-%h2
-  =t("items.item")
-  = @item.name
+%h2=t("items.item")
 
 %dl
+  %dt=t("items.name")
+  %dd=@item.name
   %dt=t("items.description")
   %dd=@item.description
   %dt=t("items.unit")
   %dd= @item.unit
   %dt= t("items.amount")
   %dd= @item.amount
+  %dt=t("auctions.auction")
+  %dd= @item.auction.name
 
 .actions
   = link_to t('back'), :back
-
-.edit_destroy
-  -if can? :update, @item
-    = link_to t("edit"), edit_auction_item_path(@auction, @item)
-  -if can? :destroy, @item
-    = link_to t("delete"), auction_item_path(@auction, @item), :method => :delete, :confirm => t("delete_confirmation")
+- if can? :modify, @item
+  .edit_destroy
+    -if can? :update, @item
+      = link_to t("edit"), edit_auction_item_path(@auction, @item)
+    -if can? :destroy, @item
+      = link_to t("delete"), auction_item_path(@auction, @item), :method => :delete, :confirm => t("delete_confirmation")
