@@ -1,7 +1,5 @@
-%h1 Editing condition
+%h2=t(".edit", :name => @condition.name)
 
 = render 'form'
 
-= link_to 'Show', @condition
-\|
-= link_to 'Back', conditions_path
+= link_to t('back'), :back

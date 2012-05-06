@@ -7,6 +7,8 @@ sk:
     percentage: Váha (v %)
     new:
       new_condition: Nová podmienka
+    edit:
+      edit: Úprava položky %{name}
     flash:
       notice:
         created: Podmienka bola vytvorená
