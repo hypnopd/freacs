@@ -30,6 +30,14 @@ class User < ActiveRecord::Base
     name || surname
   end
 
+  def auction_admin?
+    role == ROLES[:admin] || role == ROLES[:creator]
+  end
+
+  def auction_user?
+    role != ROLES[:admin] || role != ROLES[:creator]
+  end
+
   def admin?
     role == ROLES[:admin]
   end
