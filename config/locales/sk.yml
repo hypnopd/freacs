@@ -216,3 +216,5 @@ sk:
   no: Nie
   email: E-mail
   save: Ulož
+  exceptions:
+    not_found: Požadovaný záznam nebolo možné nájsť!

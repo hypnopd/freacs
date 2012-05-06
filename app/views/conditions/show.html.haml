@@ -1,16 +1,20 @@
-%p#notice= notice
+%h2= t("conditions.condition")
 
-%p
-  %b Name:
-  = @condition.name
-%p
-  %b Type:
-  -# TODO: totok uprav
-  -#= @condition.type
-%p
-  %b Percentage:
-  = @condition.percentage
+%dl
+  %dt=t("conditions.name")
+  %dd=@condition.name
+  %dt=t("conditions.description")
+  %dd=@condition.description
+  %dt=t("conditions.percentage")
+  %dd=@condition.percentage
+  %dt=t("auctions.auction")
+  %dd=@condition.auction.name
 
-= link_to 'Edit', edit_condition_path(@condition)
-\|
-= link_to 'Back', conditions_path
+.actions
+  = link_to t('back'), :back
+-if can? :modify, @condition
+  .edit_destroy
+    -if can? :update, @condition
+      = link_to t("edit"), edit_auction_condition_path(@auction, @condition)
+    - if can? :destroy, @condition
+      = link_to t("delete"), auction_condition_path(@auction, @condition), :method => :delete, :confirm => t("delete_confirmation")
