@@ -5,6 +5,7 @@ sk:
     name: Názov
     unit: Jednotka
     amount: Množstvo
+    description: Popis
     new:
       new_item: Nová položka
     edit:

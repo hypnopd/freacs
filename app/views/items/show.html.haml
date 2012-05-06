@@ -1,6 +1,10 @@
-%h2= @item.name
+%h2
+  =t("items.item")
+  = @item.name
 
 %dl
+  %dt=t("items.description")
+  %dd=@item.description
   %dt=t("items.unit")
   %dd= @item.unit
   %dt= t("items.amount")
