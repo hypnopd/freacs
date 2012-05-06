@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @auction = Auction.find params[:auction_id]
     @item = Item.find(params[:id])
 
     respond_to do |format|

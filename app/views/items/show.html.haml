@@ -1,15 +1,16 @@
-%p#notice= notice
+%h2= @item.name
 
-%p
-  %b Name:
-  = @item.name
-%p
-  %b Unit:
-  = @item.unit
-%p
-  %b Amount:
-  = @item.amount
+%dl
+  %dt=t("items.unit")
+  %dd= @item.unit
+  %dt= t("items.amount")
+  %dd= @item.amount
 
-= link_to 'Edit', edit_item_path(@item)
-\|
-= link_to 'Back', items_path
+.actions
+  = link_to t('back'), :back
+
+.edit_destroy
+  -if can? :update, @item
+    = link_to t("edit"), edit_auction_item_path(@auction, @item)
+  -if can? :destroy, @item
+    = link_to t("delete"), auction_item_path(@auction, @item), :method => :delete, :confirm => t("delete_confirmation")
