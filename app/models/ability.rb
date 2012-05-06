@@ -17,10 +17,10 @@ class Ability
       cannot [:create,:update, :destroy], [Auction, Item, Condition]
     elsif user.creator_viewer?
       cannot [:create, :update, :destroy], :all
+      can :read, Condition
     elsif user.competitor_viewer?
-      can :read, Auction
       cannot [:create, :update, :destroy], :all
-      #cannot :manage, [User, Company]
+      can :read, Condition
     end
     # Define abilities for the passed in user here. For example:
     #
