@@ -11,13 +11,10 @@
     %tbody
       - @auction.items.each do |item|
         %tr
-          - if can? [:update, :destroy], item
-            %td= link_to item.name, auction_item_path(@auction, item)
-          - else
-            %td= item.name
+          %td= link_to item.name, auction_item_path(@auction, item)
           %td= item.unit
           %td= item.amount
-          - if can? [:update, :destroy], item
+          - if can? :modify, item
             %td
               - if can? :edit, Item
                 = link_to t("edit"), edit_auction_item_path(@auction, item)

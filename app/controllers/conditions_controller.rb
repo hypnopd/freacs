@@ -13,6 +13,7 @@ class ConditionsController < ApplicationController
   # GET /conditions/1
   # GET /conditions/1.json
   def show
+    @auction = Auction.find params[:auction_id]
     @condition = Condition.find(params[:id])
 
     respond_to do |format|
@@ -45,6 +46,7 @@ class ConditionsController < ApplicationController
   def create
     @condition = Condition.new(params[:condition])
     @auction = Auction.find params[:auction_id]
+    @condition.auction = @auction if @auction
 
     respond_to do |format|
       if @condition.save

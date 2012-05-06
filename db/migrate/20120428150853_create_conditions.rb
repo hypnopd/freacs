@@ -1,10 +1,10 @@
 class CreateConditions < ActiveRecord::Migration
   def change
     create_table :conditions do |t|
-      t.string :name
-      t.string :type
+      t.string :name, :null => false
+      t.text :description
       t.integer :percentage
-      t.references :auction
+      t.references :auction, :null => false
       t.timestamps
     end
   end

@@ -9,12 +9,12 @@
   %br/
   = f.text_field :name
   %br/
-  = f.label :type
+  = f.label t("conditions.description")
   %br/
-  = f.text_field :type
+  = f.text_area :description
   %br/
-  = f.label :percentage
+  = f.label t("conditions.percentage")
   %br/
-  = f.number_field :percentage
+  = f.number_field :percentage, :min => 0, :max => 100
   %br/
   = f.submit t('save')

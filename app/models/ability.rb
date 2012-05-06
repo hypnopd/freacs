@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    alias_action :update, :destroy, :to => :modify
     if user.admin?
       can :manage, :all
     elsif user.creator?

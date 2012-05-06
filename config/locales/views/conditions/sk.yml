@@ -3,5 +3,11 @@ sk:
     condition: Podmienka
     conditions: Podmienky
     name: Názov
+    description: Popis
+    percentage: Váha (v %)
     new:
       new_condition: Nová podmienka
+    flash:
+      notice:
+        created: Podmienka bola vytvorená
+        updated: Zmena podmienky bola uložená
