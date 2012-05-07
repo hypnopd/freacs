@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :unit, :null => false
       t.float :amount, :null => false
       t.references :auction, :null => false
+      t.integer :min, :max
       t.timestamps
     end
   end
