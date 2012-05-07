@@ -210,10 +210,8 @@ sk:
   deleted: Záznam bol zmazaný!
   not_deleted: Záznam sa nepodarilo zmazať!
   actions: Akcie
-  yes: Áno
-  no: Nie
-  yes: Áno
-  no: Nie
+  positive: Áno
+  negative: Nie
   email: E-mail
   save: Ulož
   exceptions:

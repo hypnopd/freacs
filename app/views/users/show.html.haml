@@ -15,7 +15,7 @@
   %dt=t("role")
   %dd=t("users.#{@user.role}")
   %dt=t("users.confirmed")
-  %dd= @user.confirmed? ? t(".yes") : t(".no")
+  %dd= @user.confirmed? ? t("positive") : t("negative")
   - if @user.confirmed?
     %dt=t("users.confirmed_at")
     %dd=@user.confirmed_at
