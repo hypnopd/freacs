@@ -9,7 +9,7 @@
         - if current_user.auction_admin?
           %th=t(".item_min_price")
           %th=t(".item_max_price")
-        - if can? [:update, :destroy], Item
+        - if can? :modify, Item
           %th=t("actions")
     %tbody
       - @auction.items.each do |item|
@@ -20,7 +20,6 @@
           - if current_user.auction_admin?
             %td= item.min
             %td= item.max
-
           - if can? :modify, item
             %td
               - if can? :edit, Item

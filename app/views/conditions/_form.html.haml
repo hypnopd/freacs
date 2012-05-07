@@ -17,4 +17,12 @@
   %br/
   = f.number_field :percentage, :min => 0, :max => 100
   %br/
+  = f.label t("conditions.min")
+  %br/
+  = f.number_field :min, :min => 0
+  %br/
+  = f.label t("conditions.max")
+  %br/
+  = f.number_field :max, :min => 0
+  %br/
   = f.submit t('save')

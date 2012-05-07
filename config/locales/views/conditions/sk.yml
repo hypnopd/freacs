@@ -5,6 +5,8 @@ sk:
     name: Názov
     description: Popis
     percentage: Váha (v %)
+    min: Minimálna hodnota
+    max: Maximálna hodnota
     new:
       new_condition: Nová podmienka
     edit:

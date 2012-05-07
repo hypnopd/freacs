@@ -8,6 +8,11 @@
   -# TODO: add check if can view percentage
   %dt=t("conditions.percentage")
   %dd=@condition.percentage
+  - if current_user.auction_admin?
+    %dt= t("conditions.min")
+    %dd= @condition.min
+    %dt= t("conditions.max")
+    %dd= @condition.max
   %dt=t("auctions.auction")
   %dd=@condition.auction.name
 

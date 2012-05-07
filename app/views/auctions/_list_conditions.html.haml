@@ -6,11 +6,17 @@
         %tr
           %th=t("conditions.name")
           - #TODO: when view conditions criteria computing add CONDITION.PERCENTAGE
+          - if current_user.auction_admin?
+            %th=t(".condition_min_val")
+            %th=t(".condition_max_val")
           -if can? :modify, condition
             %th=t("actions")
       %tbody
         %tr
           %td= link_to condition.name, auction_condition_path(@auction,condition)
+          - if current_user.auction_admin?
+            %td= condition.min
+            %td= condition.max
           -if can? :modify, condition
             %td
               = link_to t("edit"), edit_auction_condition_path(@auction, condition)

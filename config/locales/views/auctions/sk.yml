@@ -13,6 +13,8 @@ sk:
       item_max_price: Max. cena
     list_conditions:
       add_condition: Pridaj novú podmienku
+      condition_min_val: Min. hodnota
+      condition_max_val: Max. hodnota
     flash:
       notice:
         created: Aukcia bola vytvorená
