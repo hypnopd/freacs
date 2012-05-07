@@ -309,8 +309,64 @@ body.bp {
 * html #content .edit_destroy {
   overflow-x: hidden;
 }
-
 /* line 84, ../../app/assets/stylesheets/application.css.sass */
+#content #permissions_weights_invitations {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 910px;
+  margin-bottom: 15px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content #permissions_weights_invitations {
+  overflow-x: hidden;
+}
+/* line 87, ../../app/assets/stylesheets/application.css.sass */
+#content #permissions_weights_invitations #weights {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content #permissions_weights_invitations #weights {
+  overflow-x: hidden;
+}
+/* line 89, ../../app/assets/stylesheets/application.css.sass */
+#content #permissions_weights_invitations #weights hr {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 270px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content #permissions_weights_invitations #weights hr {
+  overflow-x: hidden;
+}
+/* line 92, ../../app/assets/stylesheets/application.css.sass */
+#content #permissions_weights_invitations #weights .weight_name {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content #permissions_weights_invitations #weights .weight_name {
+  overflow-x: hidden;
+}
+/* line 94, ../../app/assets/stylesheets/application.css.sass */
+#content #permissions_weights_invitations #weights .weight_percentage {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 70px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content #permissions_weights_invitations #weights .weight_percentage {
+  overflow-x: hidden;
+}
+
+/* line 97, ../../app/assets/stylesheets/application.css.sass */
 #footer {
   display: inline;
   float: left;
@@ -323,12 +379,12 @@ body.bp {
 * html #footer {
   overflow-x: hidden;
 }
-/* line 88, ../../app/assets/stylesheets/application.css.sass */
+/* line 101, ../../app/assets/stylesheets/application.css.sass */
 #footer hr {
   color: #ffffe5;
 }
 
-/* line 91, ../../app/assets/stylesheets/application.css.sass */
+/* line 104, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   height: 18px;
   display: inline;
@@ -343,7 +399,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 98, ../../app/assets/stylesheets/application.css.sass */
+/* line 111, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -358,7 +414,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 104, ../../app/assets/stylesheets/application.css.sass */
+/* line 117, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -369,11 +425,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 106, ../../app/assets/stylesheets/application.css.sass */
+/* line 119, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 108, ../../app/assets/stylesheets/application.css.sass */
+/* line 121, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }

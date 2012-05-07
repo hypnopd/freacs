@@ -3,7 +3,7 @@ class CreateAuctions < ActiveRecord::Migration
     create_table :auctions do |t|
       t.string :name, :null => false
       t.integer :total_price_weight
-      t.boolean :rank, :best_price, :computing_criteria
+      t.boolean :rank, :best_price, :computing_criteria, :default => false
       t.timestamps
     end
   end

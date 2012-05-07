@@ -4,6 +4,8 @@ sk:
     auctions: Aukcie
     new_auction: Nová aukcia
     name: Názov
+    total_price_weight: Celková cena
+    weights: Váhy
     list_users:
       add_user: Pridaj nového používateľa
       add_exist_users: Pridaj existujúceho používateľa
@@ -15,6 +17,10 @@ sk:
       add_condition: Pridaj novú podmienku
       condition_min_val: Min. hodnota
       condition_max_val: Max. hodnota
+    perms_weights_invits:
+      weight_name: Názov váhy
+      weight_percentage: Váha v %
+      total_weight: Celková váha
     flash:
       notice:
         created: Aukcia bola vytvorená

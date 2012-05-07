@@ -1,0 +1,26 @@
+#permissions_weights_invitations
+  #weights
+    %h3=t("auctions.weights")
+    .weight_name
+      %i=t(".weight_name")
+    .weight_percentage
+      %i=t(".weight_percentage")
+    .weight_name
+      =t("auctions.total_price_weight") + ":"
+    .weight_percentage
+      =@auction.total_price_weight ? @auction.total_price_weight.to_s + " %" : "0 %"
+    - if @auction.conditions
+      - @auction.conditions.each do |condition|
+        .weight_name
+          = condition.name[0..30] + ":"
+        .weight_percentage
+          = condition.percentage ? condition.percentage.to_s + " %": "0 %"
+    %hr
+    .weight_name
+      %b=t(".total_weight")
+    .weight_percentage
+      %b= @auction.total_percentage.to_s + " %"
+  #permissions
+    %h3
+  #invitations
+    %h3

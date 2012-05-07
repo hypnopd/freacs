@@ -1,5 +1,6 @@
 %h2=@auction.name
-
+-if current_user.auction_admin? || @auction.computing_criteria
+  = render :partial => "perms_weights_invits"
 -if can? :read, AuctionUser
   = render :partial => "list_users"
 
