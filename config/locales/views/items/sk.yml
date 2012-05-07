@@ -6,6 +6,8 @@ sk:
     unit: Jednotka
     amount: Množstvo
     description: Popis
+    min: Minimálna cena
+    max: Maximálna cena
     new:
       new_item: Nová položka
     edit:

@@ -6,6 +6,9 @@
         %th=t("items.name")
         %th=t("items.unit")
         %th=t("items.amount")
+        - if current_user.auction_admin?
+          %th=t(".item_min_price")
+          %th=t(".item_max_price")
         - if can? [:update, :destroy], Item
           %th=t("actions")
     %tbody
@@ -14,6 +17,10 @@
           %td= link_to item.name, auction_item_path(@auction, item)
           %td= item.unit
           %td= item.amount
+          - if current_user.auction_admin?
+            %td= item.min
+            %td= item.max
+
           - if can? :modify, item
             %td
               - if can? :edit, Item

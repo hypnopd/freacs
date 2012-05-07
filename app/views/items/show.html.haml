@@ -11,7 +11,11 @@
   %dd= @item.amount
   %dt=t("auctions.auction")
   %dd= @item.auction.name
-
+  - if current_user.auction_admin?
+    %dt= t("items.min")
+    %dd= @item.min
+    %dt= t("items.max")
+    %dd= @item.max
 .actions
   = link_to t('back'), :back
 - if can? :modify, @item

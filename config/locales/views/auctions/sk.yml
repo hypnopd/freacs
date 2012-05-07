@@ -9,6 +9,8 @@ sk:
       add_exist_users: Pridaj existujúceho používateľa
     list_items:
       add_item: Pridaj novú položku
+      item_min_price: Min. cena
+      item_max_price: Max. cena
     list_conditions:
       add_condition: Pridaj novú podmienku
     flash:
