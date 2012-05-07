@@ -1,6 +1,6 @@
 class Condition < ActiveRecord::Base
   attr_protected :auction
-  attr_accessible :name, :percentage, :description
+  attr_accessible :name, :percentage, :description, :min, :max
   has_many :offers, :as => :offerable
   belongs_to :auction
 

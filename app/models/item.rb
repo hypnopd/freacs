@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
-  attr_accessible :amount, :name, :unit, :auction, :description
+  attr_protected :auction
+  attr_accessible :amount, :name, :unit, :description, :min, :max
   has_many :offers, :as => :offerable
   belongs_to :auction
 
