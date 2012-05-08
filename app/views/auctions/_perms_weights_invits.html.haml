@@ -20,7 +20,34 @@
       %b=t(".total_weight")
     .weight_percentage
       %b= @auction.total_percentage.to_s + " %"
-  #permissions
-    %h3
-  #invitations
-    %h3
+  - if current_user.auction_admin?
+    #empty
+    #permissions
+      %h3=t("auctions.permissions")
+
+      .permission_name
+        %i=t(".permission_name")
+      .permission_permit
+        %i=t(".permit")
+      .permission_name
+        =t("auctions.rank")
+      .permission_permit
+        =t("#{@auction.rank ? "positive" : "negative"}")
+      .permission_name
+        =t("auctions.best_price")
+      .permission_permit
+        =t("#{@auction.best_price ? "positive" : "negative"}")
+      .permission_name
+        =t("auctions.computing_criteria")
+      .permission_permit
+        =t("#{@auction.computing_criteria ? "positive" : "negative"}")
+      .edit_perms
+        (
+        = link_to t(".edit_perms")
+        )
+    #invitations
+      %h3=t("auctions.invitation")
+      - if @auction.invitation
+        = link_to @auction_invitation
+      - else
+        = link_to t("invitations.new_invitation"), new_auction_invitation_path(@auction)

@@ -6,6 +6,11 @@ sk:
     name: Názov
     total_price_weight: Celková cena
     weights: Váhy
+    permissions: Oprávnenia účastníkov
+    invitation: Pozvánka
+    rank: Poradie
+    best_price: Najlepšia ponuka
+    computing_criteria: Váhy
     list_users:
       add_user: Pridaj nového používateľa
       add_exist_users: Pridaj existujúceho používateľa
@@ -21,6 +26,9 @@ sk:
       weight_name: Názov váhy
       weight_percentage: Váha v %
       total_weight: Celková váha
+      edit_perms: Uprav oprávnenia
+      permission_name: Názov oprávnenia
+      permit: Oprávnený
     flash:
       notice:
         created: Aukcia bola vytvorená
