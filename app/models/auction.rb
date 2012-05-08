@@ -4,6 +4,7 @@ class Auction < ActiveRecord::Base
   has_many :users, :through => :auction_users
   has_many :items
   has_many :conditions
+  has_one :invitation
 
 
   def total_percentage

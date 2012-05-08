@@ -5,9 +5,4 @@ class Condition < ActiveRecord::Base
   belongs_to :auction
 
   validates_presence_of :name, :auction
-
-  def show_percentage
-    wat = percentage ?  percentage.to_s : "0"
-    puts "$$$$$$$#{wat}---#{wat.class}"
-  end
 end

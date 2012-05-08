@@ -17,6 +17,7 @@ Freacs::Application.routes.draw do
     resources :items
     resources :conditions
     resources :auction_users
+    resource :invitation
   end
 
   authenticated :user do
