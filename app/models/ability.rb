@@ -6,7 +6,7 @@ class Ability
     if user.admin?
       can :manage, :all
     elsif user.creator?
-      can [:create, :update, :read], User
+      can [:create, :update, :read], [User, Company]
       cannot :read, User, :role => "admin"
       cannot :destroy, User
       can :manage, [AuctionUser, Auction, Item, Condition]

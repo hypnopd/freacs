@@ -73,11 +73,11 @@ class User < ActiveRecord::Base
 
   def able_companies
     result = []
-    if admin?
+    if auction_admin?
       Company.all.each{|c| result << [c.name,"#{c.id}"] }
       puts "#{result}"
-    elsif creator?
     elsif competitor?
+      result << [company.name, "#{company.id}"]
     end
     result
   end
