@@ -89,4 +89,8 @@ class AuctionsController < ApplicationController
     end
   end
 
+  def permissions
+    @auction = Auction.find params[:id]
+  end
+
 end

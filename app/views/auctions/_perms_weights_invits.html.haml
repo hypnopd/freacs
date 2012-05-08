@@ -43,7 +43,7 @@
         =t("#{@auction.computing_criteria ? "positive" : "negative"}")
       .edit_perms
         (
-        = link_to t(".edit_perms")
+        = link_to t(".edit_perms"), permissions_auction_path(@auction)
         )
     #invitations
       %h3=t("auctions.invitation")

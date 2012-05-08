@@ -1,0 +1,20 @@
+%h2=t(".setting_perms")
+=form_for @auction do |f|
+  %table
+    %thead
+      %tr
+        %th=t("auctions.perms_weights_invits.permission_name")
+        %th=t("auctions.perms_weights_invits.permit")
+    %tbody
+      %tr
+        %td=t("auctions.rank")
+        %td= f.check_box :rank
+      %tr
+        %td=t("auctions.best_price")
+        %td= f.check_box :best_price
+      %tr
+        %td=t("auctions.computing_criteria")
+        %td= f.check_box :computing_criteria
+  = f.submit t("save")
+.actions
+  = link_to t("back"), :back

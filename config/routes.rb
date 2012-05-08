@@ -18,6 +18,7 @@ Freacs::Application.routes.draw do
     resources :conditions
     resources :auction_users
     resource :invitation
+    get "permissions", :on => :member
   end
 
   authenticated :user do
