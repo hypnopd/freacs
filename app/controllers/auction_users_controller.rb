@@ -1,4 +1,7 @@
 class AuctionUsersController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
+
   def new
     @users = User.all
     @auction = Auction.find params[:auction_id]
