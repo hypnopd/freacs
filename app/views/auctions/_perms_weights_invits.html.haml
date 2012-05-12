@@ -48,6 +48,6 @@
     #invitations
       %h3=t("auctions.invitation")
       - if @auction.invitation
-        = link_to @auction_invitation
+        = link_to t("invitations.invitation"), auction_invitation_path(@auction)
       - else
         = link_to t("invitations.new_invitation"), new_auction_invitation_path(@auction)

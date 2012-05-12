@@ -2,3 +2,12 @@ sk:
   invitations:
     invitation: Pozvánka
     new_invitation: Nová pozvánka
+    body: Text pozvánky
+    show:
+      invitation_of_auction: Pozvánka pre aukciu %{name}
+    edit:
+      edit_invitation_of_auction: Úprava pozvánky pre aukciu %{name}
+    flash:
+      notice:
+        created: Pozvánka bola vytvorená
+        updated: POzvánka bola zmenená

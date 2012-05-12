@@ -1,7 +1,6 @@
-%h1 Editing invitation
+%h2=t(".edit_invitation_of_auction", :name => @auction.name )
 
 = render 'form'
 
-= link_to 'Show', @invitation
-\|
-= link_to 'Back', invitations_path
+.actions
+  = link_to t('back'), :back

@@ -1,9 +1,13 @@
-%p#notice= notice
+%h2=t("invitations.show.invitation_of_auction", :name => @auction.name)
 
-%p
-  %b Body:
-  = @invitation.body
+%dl
+  %dt=t("invitations.body")
+  %dd=@invitation.body
+  %dt=t("auctions.auction")
+  %dd=link_to @auction.name, @auction
 
-= link_to 'Edit', edit_invitation_path(@invitation)
-\|
-= link_to 'Back', invitations_path
+.actions
+  = link_to t('back'), :back
+.edit_destroy
+  = link_to t('edit'), edit_auction_invitation_path(@auction)
+  = link_to t("delete"), auction_invitation_url(@auction), :method => :delete, :confirm => t("delete_confirmation")
