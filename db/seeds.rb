@@ -74,4 +74,4 @@ competitor_viewer.update_attribute :parent, competitor
 puts "Created Competitor_viewer user: " << competitor_viewer.email
 
 #create default auction
-puts Auction.create!(:name => "test") ? "'Test' auction created!" : "Smth went wrong when created 'Test' auction"
+puts Auction.create!(:name => "test", :phase => Auction::PHASES[:init]) ? "'Test' auction created!" : "Smth went wrong when created 'Test' auction"

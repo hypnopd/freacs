@@ -48,7 +48,7 @@ class AuctionsController < ApplicationController
   # POST /auctions.json
   def create
     @auction = Auction.new(params[:auction])
-
+    @auction.phase = Auction::PHASES[:init]
     respond_to do |format|
       if @auction.save
         format.html { redirect_to @auction, notice: t('auctions.flash.notice.created') }

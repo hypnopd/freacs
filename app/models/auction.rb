@@ -1,11 +1,15 @@
 class Auction < ActiveRecord::Base
-  attr_accessible :name, :total_price_weight, :rank, :best_price, :computing_criteria
+  attr_accessible :name, :total_price_weight, :rank, :best_price, :computing_criteria, :phase
   has_many :auction_users
   has_many :users, :through => :auction_users
   has_many :items
   has_many :conditions
   has_one :invitation
   has_many :events
+
+  validates_presence_of :name
+
+  PHASES = {:init => "initialization", :sent => "sent_invitations"}
 
 
   def total_percentage
