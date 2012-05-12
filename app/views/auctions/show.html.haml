@@ -6,5 +6,8 @@
 
 = render :partial => "list_items"
 = render :partial => "list_conditions"
-
-= link_to t("back"), :back
+.actions
+  = link_to t("back"), :back
+.edit_destroy
+  - if current_user.auction_admin?
+    = button_to t("auctions.send_invitations"), send_invitations_auction_path(@auction)

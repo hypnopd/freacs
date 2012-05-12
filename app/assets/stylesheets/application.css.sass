@@ -4,6 +4,8 @@
 @import "sassybuttons"
 @import "blueprint"
 @import "blueprint/form"
+@import "blueprint/reset/utilities"
+
 
 body.bp
   background-color: $blueprint-background-color
@@ -81,6 +83,8 @@ body.bp
   .edit_destroy
     +prepend(19)
     +column(3,true)
+    form.button_to
+      +blueprint-reset
   #permissions_weights_invitations
     +column(23,true)
     margin-bottom: 15px

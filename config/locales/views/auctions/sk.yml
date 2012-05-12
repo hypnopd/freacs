@@ -11,6 +11,7 @@ sk:
     rank: Poradie
     best_price: Najlepšia ponuka
     computing_criteria: Váhy
+    send_invitations: Pošli pozvánky
     list_users:
       add_user: Pridaj nového používateľa
       add_exist_users: Pridaj existujúceho používateľa
@@ -32,3 +33,4 @@ sk:
     flash:
       notice:
         created: Aukcia bola vytvorená
+        sent: Pozánky rozposlané

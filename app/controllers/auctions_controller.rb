@@ -93,4 +93,8 @@ class AuctionsController < ApplicationController
     @auction = Auction.find params[:id]
   end
 
+  def send_invitations
+    redirect_to @auction, :notice => t("auctions.flash.notice.sent")
+  end
+
 end

@@ -1,5 +1,7 @@
 Freacs::Application.routes.draw do
 
+  get "events/index"
+
   devise_for :users,
     :controllers => {:registrations => "registrations"},
     :path_names => {
@@ -19,6 +21,7 @@ Freacs::Application.routes.draw do
     resources :auction_users
     resource :invitation
     get "permissions", :on => :member
+    post "send_invitations", :on => :member
   end
 
   authenticated :user do
