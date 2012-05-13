@@ -1,0 +1,38 @@
+%h3
+  =t("offers.offers_for_items")
+  %table
+    %thead
+      %tr
+        %th=t("items.item")
+        %th=t("offers.offer_value")
+        %th=t("actions")
+    %tbody
+      - @auction.items.each do |item|
+        %tr
+          %td=link_to item.name, auction_item_path(@auction, item)
+          %td
+            -if item.offers.where("auction_user_id =?", @auction_user.id).empty?
+              = "-"
+            -else
+              = item.offers.where("auction_user_id =?", @auction_user.id).last.value
+          %td=link_to t("offers.give_offer"), new_auction_offer_path(@auction, :item_id => item.id)
+
+-unless @auction.conditions.empty?
+  %h3
+    =t("offers.offers_for_conditions")
+    %table
+      %thead
+        %tr
+          %th=t("conditions.condition")
+          %th=t("offers.offer_value")
+          %th=t("actions")
+      %tbody
+        - @auction.conditions.each do |condition|
+          %tr
+            %td=link_to condition.name, auction_condition_path(@auction, condition)
+            %td
+              -if condition.offers.where("auction_user_id =?", @auction_user.id).empty?
+                = "-"
+              -else
+                = condition.offers.where("auction_user_id =?", @auction_user.id).last.value
+            %td=link_to t("offers.give_offer"), new_auction_offer_path(@auction, :condition_id => condition.id)

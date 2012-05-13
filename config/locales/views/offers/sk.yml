@@ -7,6 +7,12 @@ sk:
     offer_value: Hodnota ponuky
     give_offer: Zadaj ponuku
     new_offer: Nová ponuka
+    type: Typ
+    name: Názov
+    value: Hodnota
+    Item: Položka
+    Condition: Podmienka
+    offers_from_user: Ponuky od používateľa %{username}
     flash:
       notice:
         created: Ponuka bola vytvorená

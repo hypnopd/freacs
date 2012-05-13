@@ -1,23 +1,23 @@
-%h2=t("offers.offers_from_user", :username => @user.name)
+%h2=t("offers.offers_from_user", :username => @user.email)
 
 %table
   %thead
     %tr
-      %th=t("offer.type")
-      %th=t("offer.name")
-      %th=t("offer.value")
+      %th=t("offers.type")
+      %th=t("offers.name")
+      %th=t("offers.value")
 
   - @items_offers.each do |offer|
     %tbody
       %tr
-        %td=offer.offerable_type
+        %td=t("offers.#{offer.offerable_type}")
         %td=offer.offerable.name
         %td=offer.value
   -if @conditions_offers
     - @conditions_offers.each do |condition_offer|
       %tbody
         %tr
-          %td=condition_offer.offerable_type
+          %td=t("offers.#{condition_offer.offerable_type}")
           %td=condition_offer.offerable.name
           %td=condition_offer.value
 = link_to t("back"), :back
