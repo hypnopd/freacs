@@ -1,10 +1,17 @@
-= form_for @offer do |f|
-  -if @offer.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@offer.errors.count, "error")} prohibited this offer from being saved:"
-      %ul
-        - @offer.errors.full_messages.each do |msg|
-          %li= msg
-
-  .actions
-    = f.submit 'Save'
+= form_for [@auction,@offer] do |f|
+  -unless @offer.errors.empty?
+    .error
+      - @offer.errors.full_messages.each do |msg|
+        %li= msg
+  -if @item
+    = render :partial => "item_description"
+  -elsif @condition
+    = render :partial => "condition_description"
+  =f.label t("offers.offer_value")
+  %br/
+  =f.text_field :value
+  %br/
+  =f.hidden_field :offerable_type, :value => @offer.offerable_type
+  =f.hidden_field :offerable_id, :value => @offer.offerable_id
+  =f.hidden_field :auction_user_id, :value => @offer.auction_user.id
+  = f.submit t('save')

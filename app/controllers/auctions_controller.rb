@@ -22,6 +22,9 @@ class AuctionsController < ApplicationController
   def show
     @auction = Auction.find(params[:id])
     @auction_users = AuctionUser.find_all_by_auction_id(params[:id])
+    if @auction.phase == Auction::PHASES[:first] && !(current_user.auction_admin?)
+      @auction_user = AuctionUser.find_by_user_id(current_user.id)
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @auction }

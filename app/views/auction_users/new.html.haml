@@ -1,7 +1,6 @@
 %h2=t(".add_users_to", :auction_name => @auction.name)
 
 %h3=t(".exists_users")
--# TODO: show users in auction already, show others
 .form
   - if @users_not_in
     = form_tag ({:controller => "auction_users", :action => "create"}) do

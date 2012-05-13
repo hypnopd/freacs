@@ -1,17 +1,27 @@
-%h1 Listing offers
+%h2=t("offers.offers_from_user", :username => @user.name)
 
 %table
-  %tr
-    %th
-    %th
-    %th
-
-  - @offers.each do |offer|
+  %thead
     %tr
-      %td= link_to 'Show', offer
-      %td= link_to 'Edit', edit_offer_path(offer)
-      %td= link_to 'Destroy', offer, :confirm => 'Are you sure?', :method => :delete
+      %th=t("offer.type")
+      %th=t("offer.name")
+      %th=t("offer.value")
 
-%br
+  - @items_offers.each do |offer|
+    %tbody
+      %tr
+        %td=offer.offerable_type
+        %td=offer.offerable.name
+        %td=offer.value
+  -if @conditions_offers
+    - @conditions_offers.each do |condition_offer|
+      %tbody
+        %tr
+          %td=condition_offer.offerable_type
+          %td=condition_offer.offerable.name
+          %td=condition_offer.value
+= link_to t("back"), :back
 
-= link_to 'New Offer', new_offer_path
+
+
+

@@ -1,5 +1,9 @@
-%h1 New offer
+%h2
+  -if @item
+    =t("offers.new_offer", :name => @item.name )
+  -elsif @condition
+    =t("offers.new_offer", :name => @condition.name)
 
 = render 'form'
 
-= link_to 'Back', offers_path
+= link_to t('back'), :back

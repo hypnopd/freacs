@@ -2,3 +2,11 @@ sk:
   offers:
     offer: Ponuka
     offers: Ponuky
+    offers_for_items: Ponuky pre položky
+    offers_for_conditions: Ponuky pre podmienky
+    offer_value: Hodnota ponuky
+    give_offer: Zadaj ponuku
+    new_offer: Nová ponuka
+    flash:
+      notice:
+        created: Ponuka bola vytvorená
