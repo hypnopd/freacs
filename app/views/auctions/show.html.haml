@@ -1,4 +1,10 @@
-%h2=@auction.name
+%h2
+  .name
+    =@auction.name
+  .phase
+    =t("auctions.phases.phase")
+  .phase_name
+    =t("auctions.phases.#{@auction.phase}")
 -# INIT PHASE
 - if @auction.phase == Auction::PHASES[:init]
   -if current_user.auction_admin? || @auction.computing_criteria
@@ -20,5 +26,9 @@
 - elsif @auction.phase == Auction::PHASES[:first]
   - if current_user.auction_admin?
     = render :partial => "list_offers"
+    .actions
+      =link_to t("back"), :back
+    .edit_destroy
+      =button_to t("auctions.start")
   - else
     = render :partial => "user_offer"

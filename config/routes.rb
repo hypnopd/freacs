@@ -15,7 +15,7 @@ Freacs::Application.routes.draw do
   resources :companies
   resources :invitations
   resources :auctions do
-    resources :offers, :except => [:destroy, :update, :edit]
+    resources :offers, :except => :destroy
     resources :items
     resources :conditions
     resources :auction_users

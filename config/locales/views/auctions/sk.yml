@@ -12,10 +12,12 @@ sk:
     best_price: Najlepšia ponuka
     computing_criteria: Váhy
     send_invitations: Pošli pozvánky
+    start: Spusti aukciu
     competitors_count: Počet súťažiacich
     items_count: Počet položiek
     set_total_price_weight: Nastav váhu
     phases:
+      phase: "Fáza:"
       initialization: Inicializácia
       sent_invitations: Rozposlanie pozvánok
       first_offers: Prvé ponuky
@@ -30,6 +32,9 @@ sk:
       add_condition: Pridaj novú podmienku
       condition_min_val: Min. hodnota
       condition_max_val: Max. hodnota
+    list_offers:
+      no_offer: Žiadna ponuka
+      show_offers: Ukáž ponuku
     perms_weights_invits:
       weight_name: Názov váhy
       weight_percentage: Váha v %

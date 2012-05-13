@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   belongs_to :company
   has_many :auction_users
   has_many :auctions, :through => :auction_users
+  has_many :offers, :through => :auction_users
 
   ROLES = {:admin => "admin",
            :creator => "creator",

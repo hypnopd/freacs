@@ -190,12 +190,14 @@ body.bp {
   border: 1px solid #cccccc;
 }
 /* line 58, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password], #content form textarea {
+#content form input.text, #content form input.title, #content form input[type=email], #content form input[type=text], #content form input[type=password],
+#content form textarea {
   background-color: #fff;
   border: 1px solid #bbbbbb;
 }
 /* line 61, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content form input.text:focus, #content form input.title:focus, #content form input[type=email]:focus, #content form input[type=text]:focus, #content form input[type=password]:focus, #content form textarea:focus {
+#content form input.text:focus, #content form input.title:focus, #content form input[type=email]:focus, #content form input[type=text]:focus, #content form input[type=password]:focus,
+#content form textarea:focus {
   border-color: #666666;
 }
 /* line 65, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -284,7 +286,41 @@ body.bp {
 * html #content h2 {
   overflow-x: hidden;
 }
-/* line 80, ../../app/assets/stylesheets/application.css.sass */
+/* line 79, ../../app/assets/stylesheets/application.css.sass */
+#content h2 .name {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 390px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content h2 .name {
+  overflow-x: hidden;
+}
+/* line 81, ../../app/assets/stylesheets/application.css.sass */
+#content h2 .phase {
+  padding-left: 240px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content h2 .phase {
+  overflow-x: hidden;
+}
+/* line 84, ../../app/assets/stylesheets/application.css.sass */
+#content h2 .phase_name {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 190px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p0@freacs/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content h2 .phase_name {
+  overflow-x: hidden;
+}
+/* line 87, ../../app/assets/stylesheets/application.css.sass */
 #content .actions {
   display: inline;
   float: left;
@@ -295,7 +331,7 @@ body.bp {
 * html #content .actions {
   overflow-x: hidden;
 }
-/* line 83, ../../app/assets/stylesheets/application.css.sass */
+/* line 90, ../../app/assets/stylesheets/application.css.sass */
 #content .edit_destroy {
   padding-left: 760px;
   display: inline;
@@ -307,7 +343,7 @@ body.bp {
 * html #content .edit_destroy {
   overflow-x: hidden;
 }
-/* line 86, ../../app/assets/stylesheets/application.css.sass */
+/* line 93, ../../app/assets/stylesheets/application.css.sass */
 #content .edit_destroy form.button_to {
   margin: 0;
   padding: 0;
@@ -318,7 +354,7 @@ body.bp {
   font-family: inherit;
   vertical-align: baseline;
 }
-/* line 88, ../../app/assets/stylesheets/application.css.sass */
+/* line 95, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations {
   display: inline;
   float: left;
@@ -330,7 +366,7 @@ body.bp {
 * html #content #permissions_weights_invitations {
   overflow-x: hidden;
 }
-/* line 91, ../../app/assets/stylesheets/application.css.sass */
+/* line 98, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #weights {
   display: inline;
   float: left;
@@ -341,7 +377,7 @@ body.bp {
 * html #content #permissions_weights_invitations #weights {
   overflow-x: hidden;
 }
-/* line 93, ../../app/assets/stylesheets/application.css.sass */
+/* line 100, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #weights hr {
   display: inline;
   float: left;
@@ -352,7 +388,7 @@ body.bp {
 * html #content #permissions_weights_invitations #weights hr {
   overflow-x: hidden;
 }
-/* line 96, ../../app/assets/stylesheets/application.css.sass */
+/* line 103, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #weights .weight_name {
   display: inline;
   float: left;
@@ -363,7 +399,7 @@ body.bp {
 * html #content #permissions_weights_invitations #weights .weight_name {
   overflow-x: hidden;
 }
-/* line 98, ../../app/assets/stylesheets/application.css.sass */
+/* line 105, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #weights .weight_percentage {
   display: inline;
   float: left;
@@ -374,7 +410,7 @@ body.bp {
 * html #content #permissions_weights_invitations #weights .weight_percentage {
   overflow-x: hidden;
 }
-/* line 101, ../../app/assets/stylesheets/application.css.sass */
+/* line 108, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #permissions {
   padding-left: 40px;
   display: inline;
@@ -386,7 +422,7 @@ body.bp {
 * html #content #permissions_weights_invitations #permissions {
   overflow-x: hidden;
 }
-/* line 104, ../../app/assets/stylesheets/application.css.sass */
+/* line 111, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #permissions .permission_name {
   display: inline;
   float: left;
@@ -397,7 +433,7 @@ body.bp {
 * html #content #permissions_weights_invitations #permissions .permission_name {
   overflow-x: hidden;
 }
-/* line 106, ../../app/assets/stylesheets/application.css.sass */
+/* line 113, ../../app/assets/stylesheets/application.css.sass */
 #content #permissions_weights_invitations #permissions .permission_permit {
   display: inline;
   float: left;
@@ -409,7 +445,7 @@ body.bp {
   overflow-x: hidden;
 }
 
-/* line 109, ../../app/assets/stylesheets/application.css.sass */
+/* line 116, ../../app/assets/stylesheets/application.css.sass */
 #footer {
   display: inline;
   float: left;
@@ -422,12 +458,12 @@ body.bp {
 * html #footer {
   overflow-x: hidden;
 }
-/* line 113, ../../app/assets/stylesheets/application.css.sass */
+/* line 120, ../../app/assets/stylesheets/application.css.sass */
 #footer hr {
   color: #ffffe5;
 }
 
-/* line 116, ../../app/assets/stylesheets/application.css.sass */
+/* line 123, ../../app/assets/stylesheets/application.css.sass */
 #infobar {
   height: 18px;
   display: inline;
@@ -442,7 +478,7 @@ body.bp {
 * html #infobar {
   overflow-x: hidden;
 }
-/* line 123, ../../app/assets/stylesheets/application.css.sass */
+/* line 130, ../../app/assets/stylesheets/application.css.sass */
 #infobar > a {
   display: inline;
   float: left;
@@ -457,7 +493,7 @@ body.bp {
 * html #infobar > a {
   overflow-x: hidden;
 }
-/* line 129, ../../app/assets/stylesheets/application.css.sass */
+/* line 136, ../../app/assets/stylesheets/application.css.sass */
 #infobar span {
   display: inline;
   float: left;
@@ -468,11 +504,11 @@ body.bp {
 * html #infobar span {
   overflow-x: hidden;
 }
-/* line 131, ../../app/assets/stylesheets/application.css.sass */
+/* line 138, ../../app/assets/stylesheets/application.css.sass */
 #infobar span + a {
   padding-left: 560px;
 }
-/* line 133, ../../app/assets/stylesheets/application.css.sass */
+/* line 140, ../../app/assets/stylesheets/application.css.sass */
 #infobar a {
   padding-left: 760px;
 }
