@@ -67,7 +67,7 @@ class AuctionsController < ApplicationController
 
     respond_to do |format|
       if @auction.update_attributes(params[:auction])
-        format.html { redirect_to @auction, :notice => t("auc") }
+        format.html { redirect_to @auction, :notice => t("auctions.flash.notice.updated") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -95,7 +95,7 @@ class AuctionsController < ApplicationController
 
   def send_invitations
     @auction = Auction.find params[:id]
-    @auction.phase = Auction::PHASES[:sent]
+    @auction.phase = Auction::PHASES[:first]
     if @auction.save!
       redirect_to @auction, :notice => t("auctions.flash.notice.sent")
     else

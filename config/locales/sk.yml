@@ -216,3 +216,6 @@ sk:
   save: Ulož
   exceptions:
     not_found: Požadovaný záznam nebolo možné nájsť!
+  initialization: Inicializácia
+  sent_invitations: Poslané pozvánky
+  first: Prvé ponuky

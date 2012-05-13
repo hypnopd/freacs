@@ -1,17 +1,24 @@
 %h2=@auction.name
--if current_user.auction_admin? || @auction.computing_criteria
-  -if @auction.errors
-    .error
-      - @auction.errors.full_messages.each do |msg|
-        %li= msg
-  = render :partial => "perms_weights_invits"
--if can? :read, AuctionUser
-  = render :partial => "list_users"
+-# INIT PHASE
+- if @auction.phase == Auction::PHASES[:init]
+  -if current_user.auction_admin? || @auction.computing_criteria
+    -if @auction.errors
+      .error
+        - @auction.errors.full_messages.each do |msg|
+          %li= msg
+    = render :partial => "perms_weights_invits"
+  -if can? :read, AuctionUser
+    = render :partial => "list_users"
 
-= render :partial => "list_items"
-= render :partial => "list_conditions"
-.actions
-  = link_to t("back"), :back
-.edit_destroy
-  - if current_user.auction_admin?
-    = button_to t("auctions.send_invitations"), send_invitations_auction_path(@auction)
+  = render :partial => "list_items"
+  = render :partial => "list_conditions"
+  .actions
+    = link_to t("back"), :back
+  .edit_destroy
+    - if current_user.auction_admin?
+      = button_to t("auctions.send_invitations"), send_invitations_auction_path(@auction)
+- elsif @auction.phase == Auction::PHASES[:first]
+  - if currenr_user.auction_admin?
+    = render :partial => "list_offers"
+  - else
+    = render :partial => "user_offer"
