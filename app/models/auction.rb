@@ -13,7 +13,7 @@ class Auction < ActiveRecord::Base
   PHASES = {:init => "initialization", :sent => "sent_invitations", :first => "first_offers"}
 
   def invitations_sending
-    if phase == Auction::PHASES[:sent]
+    if phase == Auction::PHASES[:first]
       unless users.count > 2 && check_competitors_count > 1
         errors.add(I18n.t("auctions.competitors_count"), I18n.t("auctions.errors.not_enough"))
       end
