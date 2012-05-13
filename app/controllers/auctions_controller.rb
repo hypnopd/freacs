@@ -96,7 +96,7 @@ class AuctionsController < ApplicationController
   def send_invitations
     @auction = Auction.find params[:id]
     @auction.phase = Auction::PHASES[:sent]
-    if @auction.save
+    if @auction.save!
       redirect_to @auction, :notice => t("auctions.flash.notice.sent")
     else
       render :show, :alert => t("auctions.flash.alert.cannot_send")

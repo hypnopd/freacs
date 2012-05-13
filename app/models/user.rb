@@ -75,7 +75,6 @@ class User < ActiveRecord::Base
     result = []
     if auction_admin?
       Company.all.each{|c| result << [c.name,"#{c.id}"] }
-      puts "#{result}"
     elsif competitor?
       result << [company.name, "#{company.id}"]
     end

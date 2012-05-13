@@ -1,5 +1,5 @@
 class Auction < ActiveRecord::Base
-  attr_accessible :name, :total_price_weight, :rank, :best_price, :computing_criteria, :phase
+  attr_accessible :name, :total_price_weight, :rank, :best_price, :computing_criteria, :phase, :invitation
   has_many :auction_users
   has_many :users, :through => :auction_users
   has_many :items
@@ -22,6 +22,9 @@ class Auction < ActiveRecord::Base
       end
       unless total_percentage == 100
         errors.add(I18n.t("auctions.weights"), I18n.t("auctions.errors.not_100"))
+      end
+      unless invitation
+        errors.add(I18n.t("invitations.invitation"), I18n.t("auctions.errors.not_exist"))
       end
     end
   end

@@ -47,3 +47,4 @@ sk:
     errors:
       not_enough: nie je dostatočný
       not_100: "- Súčet nie je 100%"
+      not_exist: neexistuje
