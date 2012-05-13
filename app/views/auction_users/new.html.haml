@@ -3,13 +3,15 @@
 %h3=t(".exists_users")
 -# TODO: show users in auction already, show others
 .form
-  - if @users
+  - if @users_not_in
     = form_tag ({:controller => "auction_users", :action => "create"}) do
-      - @users.each do |user|
+      - @users_not_in.each do |user|
         = check_box_tag "users[]", "#{user.id}"
         = label_tag "name", "#{user.email}"
         %br/
       = submit_tag t("save")
 
-.links
-= link_to t(".register_new_user"), new_user_registration_path
+
+.actions
+  = link_to t("back"), :back
+  = link_to t(".register_new_user"), new_user_registration_path

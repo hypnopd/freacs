@@ -1,0 +1,11 @@
+%h2=t("auctions.set_total_price_weight")
+
+=form_for @auction do |f|
+  =f.label t("auctions.total_price_weight")
+  (váha v %)
+  %br/
+  =f.number_field :total_price_weight
+  =f.submit t("save")
+
+.actions
+  =link_to t("back"), :back

@@ -12,6 +12,13 @@ sk:
     best_price: Najlepšia ponuka
     computing_criteria: Váhy
     send_invitations: Pošli pozvánky
+    competitors_count: Počet súťažiacich
+    items_count: Počet položiek
+    set_total_price_weight: Nastav váhu
+    phases:
+      initialization: Inicializácia
+      sent_invitations: Rozposlanie pozvánok
+      first_offers: Prvé ponuky
     list_users:
       add_user: Pridaj nového používateľa
       add_exist_users: Pridaj existujúceho používateľa
@@ -33,4 +40,10 @@ sk:
     flash:
       notice:
         created: Aukcia bola vytvorená
+        updated: Aukcia bola zmenená
         sent: Pozánky rozposlané
+      alert:
+        cannot_send: Pozvánky nebolo možné rozposlať
+    errors:
+      not_enough: nie je dostatočný
+      not_100: "- Súčet nie je 100%"

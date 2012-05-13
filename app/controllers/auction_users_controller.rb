@@ -5,6 +5,7 @@ class AuctionUsersController < ApplicationController
   def new
     @users = User.all
     @auction = Auction.find params[:auction_id]
+    @users_not_in = @users - @auction.users
   end
 
   def create

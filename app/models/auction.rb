@@ -8,8 +8,23 @@ class Auction < ActiveRecord::Base
   has_many :events
 
   validates_presence_of :name
+  validate :invitations_sending
 
-  PHASES = {:init => "initialization", :sent => "sent_invitations"}
+  PHASES = {:init => "initialization", :sent => "sent_invitations", :first => "first_offers"}
+
+  def invitations_sending
+    if phase == Auction::PHASES[:sent]
+      unless users.count > 2 && check_competitors_count > 1
+        errors.add(I18n.t("auctions.competitors_count"), I18n.t("auctions.errors.not_enough"))
+      end
+      unless items.count > 0
+        errors.add(I18n.t("auctions.items_count"), I18n.t("auctions.errors.not_enough"))
+      end
+      unless total_percentage == 100
+        errors.add(I18n.t("auctions.weights"), I18n.t("auctions.errors.not_100"))
+      end
+    end
+  end
 
 
   def total_percentage
@@ -24,5 +39,11 @@ class Auction < ActiveRecord::Base
     else
       0
     end
+  end
+
+  private
+
+  def check_competitors_count
+    users.find_all {|user| user.role == "competitor"}.count
   end
 end
