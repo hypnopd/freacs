@@ -13,12 +13,10 @@
 # gem 'pg'
 #
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: freacs_development
   pool: 5
-  username: freacs
-  password: ffreacss195
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -39,20 +37,16 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: freacs_test
   pool: 5
-  username: freacs
-  password: ffreacss159
 
 production:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: freacs_production
   pool: 5
-  username: freacs
-  password:
 
 cucumber:
   <<: *test

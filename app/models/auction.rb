@@ -39,7 +39,7 @@ class Auction < ActiveRecord::Base
         end
       end
       if offers_count < 2
-        errors.add(t("offers.offers"), t("auctions.errors.few_offers"))
+        errors.add(I18n.t("offers.offers"), I18n.t("auctions.errors.few_offers"))
       end
     end
   end

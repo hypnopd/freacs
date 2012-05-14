@@ -31,7 +31,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       # t.encryptable
       # t.token_authenticatable
-
+      t.string :role, :null => false
+      t.references :company, :null=>false
       t.timestamps
     end
 

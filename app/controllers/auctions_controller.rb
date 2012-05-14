@@ -118,7 +118,7 @@ class AuctionsController < ApplicationController
       redirect_to @auction, :notice => t("auctions.flash.notice.start")
     else
       @auction.phase = Auction::PHASES[:first]
-      render :show, flash.now[:alert] => t("auctions.flash.alert.cannot_start")
+      render :show, :alert => t("auctions.flash.alert.cannot_start")
     end
   end
 
