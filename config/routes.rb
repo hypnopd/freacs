@@ -23,6 +23,7 @@ Freacs::Application.routes.draw do
     get "permissions", :on => :member
     post "send_invitations", :on => :member
     get "total_price_weight", :on => :member
+    post "start_auction", :on => :member
   end
 
   authenticated :user do

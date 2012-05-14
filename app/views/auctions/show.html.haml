@@ -5,7 +5,7 @@
     =t("auctions.phases.phase")
   .phase_name
     =t("auctions.phases.#{@auction.phase}")
-  -# INIT PHASE
+
 - if @auction.phase == Auction::PHASES[:init]
   -if current_user.auction_admin? || @auction.computing_criteria
     -if @auction.errors
@@ -23,15 +23,23 @@
   .edit_destroy
     - if current_user.auction_admin?
       = button_to t("auctions.send_invitations"), send_invitations_auction_path(@auction)
-  -# FIRST OFFERS
 - elsif @auction.phase == Auction::PHASES[:first]
   - if current_user.auction_admin?
+    = render :partial => "perms_weights_invits"
     = render :partial => "list_items"
     = render :partial => "list_conditions"
     = render :partial => "list_offers"
     .actions
       =link_to t("back"), :back
     .edit_destroy
-      =button_to t("auctions.start")
+      =button_to t("auctions.start"), start_auction_auction_path(@auction)
   - else
     = render :partial => "user_offers"
+- elsif @auction.phase == Auction::PHASES[:start]
+  - if current_user.auction_admin?
+    = render :partial => "perms_weights_invits"
+    = render :partial => "list_items"
+    = render :partial => "list_conditions"
+    = render :partial => "list_offers"
+  -else
+    =render :partial => "user_offers"

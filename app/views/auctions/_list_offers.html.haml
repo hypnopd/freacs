@@ -4,6 +4,8 @@
     %tr
       %th=t("users.user")
       %th=t("offers.offers")
+      - if @auction.phase == Auction::PHASES[:start]
+        %th=t("auctions.rank")
   %tbody
     - @auction.users.each do |user|
       %tr
@@ -13,4 +15,6 @@
             =link_to t(".show_offers"), auction_offers_path(@auction, :user_id=> user.id)
           - else
             =t(".no_offer")
+        - if @auction.phase == Auction::PHASES[:start]
+          %td= compute_rank(user,@auction)
 %hr

@@ -21,6 +21,8 @@ sk:
       initialization: Inicializácia
       sent_invitations: Rozposlanie pozvánok
       first_offers: Prvé ponuky
+      started: Súťaž
+      finished: Ukončená
     list_users:
       add_user: Pridaj nového používateľa
       add_exist_users: Pridaj existujúceho používateľa
@@ -42,14 +44,21 @@ sk:
       edit_perms: Uprav oprávnenia
       permission_name: Názov oprávnenia
       permit: Oprávnený
+    user_offers:
+      weight_name: Názov váhy
+      weight_percentage: Váha v %
+      total_weight: Celková váha
     flash:
       notice:
         created: Aukcia bola vytvorená
         updated: Aukcia bola zmenená
         sent: Pozánky rozposlané
+        start: Aukcia bola spustená
       alert:
         cannot_send: Pozvánky nebolo možné rozposlať
+        cannot_start: Aukcia nemôže začať
     errors:
       not_enough: nie je dostatočný
       not_100: "- Súčet nie je 100%"
       not_exist: neexistuje
+      few_offers: "- málo ponúk"

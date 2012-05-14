@@ -22,7 +22,7 @@ class AuctionsController < ApplicationController
   def show
     @auction = Auction.find(params[:id])
     @auction_users = AuctionUser.find_all_by_auction_id(params[:id])
-    if @auction.phase == Auction::PHASES[:first] && !(current_user.auction_admin?)
+    if (@auction.phase == Auction::PHASES[:first]) || (@auction.phase == Auction::PHASES[:start]) && !(current_user.auction_admin?)
       @auction_user = AuctionUser.find_by_user_id(current_user.id)
     end
     respond_to do |format|
@@ -103,12 +103,23 @@ class AuctionsController < ApplicationController
       redirect_to @auction, :notice => t("auctions.flash.notice.sent")
     else
       @auction.phase = Auction::PHASES[:init]
-      render :show, :alert => t("auctions.flash.alert.cannot_send")
+      render :show, flash.now[:alert] => t("auctions.flash.alert.cannot_send")
     end
   end
 
   def total_price_weight
     @auction = Auction.find params[:id]
+  end
+
+  def start_auction
+    @auction = Auction.find params[:id]
+    @auction.phase = Auction::PHASES[:start]
+    if @auction.save
+      redirect_to @auction, :notice => t("auctions.flash.notice.start")
+    else
+      @auction.phase = Auction::PHASES[:first]
+      render :show, flash.now[:alert] => t("auctions.flash.alert.cannot_start")
+    end
   end
 
 end

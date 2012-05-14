@@ -7,6 +7,10 @@ class AuctionObserver < ActiveRecord::Observer
       model.users.each do |user|
         InvitationMailer.invitation_email(user, model.invitation).deliver
       end
+    elsif model.phase == Auction::PHASES[:start]
+      Event.create!(:name => Auction::PHASES[:start], :auction_id => model.id)
+    elsif model.phase == Auction::PHASES[:finish]
+      Event.create!(:name => Auction::PHASES[:finish], :auction_id => model.id)
     end
   end
 

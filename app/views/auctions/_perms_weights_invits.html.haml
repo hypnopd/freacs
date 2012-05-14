@@ -10,7 +10,8 @@
     .weight_percentage
       =@auction.total_price_weight ? @auction.total_price_weight.to_s + " %" : "0 %"
       %br/
-      = link_to t("auctions.set_total_price_weight"), total_price_weight_auction_path(@auction)
+      -if current_user.auction_admin?
+        = link_to t("auctions.set_total_price_weight"), total_price_weight_auction_path(@auction)
     - if @auction.conditions
       - @auction.conditions.each do |condition|
         .weight_name
