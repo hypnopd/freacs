@@ -17,4 +17,9 @@
 #Ignore IDEA files.
 /.idea
 
+#Ignore sqlite3 DBs
+/freacs_development
+/freacs_test
+/freacs_production
+
 /db/schema.rb
