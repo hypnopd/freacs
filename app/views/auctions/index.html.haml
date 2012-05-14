@@ -7,13 +7,16 @@
   %thead
     %tr
       %th=t("auctions.name")
-      %th=t("actions")
+      %th=t("auctions.phases.phase")
+      - if current_user.auction_admin?
+        %th=t("actions")
 
   -if @auctions
     %tbody
       - @auctions.each do |auction|
         %tr
         %td= link_to auction.name, auction
+        %td= t("auctions.phases.#{auction.phase}")
         %td
           -if can? :update, auction
             = link_to t('edit'), edit_auction_path(auction)

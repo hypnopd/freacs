@@ -6,5 +6,6 @@ class HomeController < ApplicationController
   end
 
   def index
+    @auctions = current_user.auctions
   end
 end

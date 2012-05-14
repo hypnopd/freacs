@@ -1,2 +1,14 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h2=t("homepage.page")
+
+%h3=t("auctions.auctions")
+%table
+  %thead
+    %tr
+      %th=t("auctions.name")
+      %th=t("auctions.phases.phase")
+  -if @auctions
+    -@auctions.each do |auction|
+      %tbody
+        %tr
+          %td=link_to auction.name, auction_path(auction)
+          %td=t("auctions.phases.#{auction.phase}")
