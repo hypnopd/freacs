@@ -122,4 +122,15 @@ class AuctionsController < ApplicationController
     end
   end
 
+  def finish_auction
+    @auction = Auction.find params[:id]
+    @auction.phase = Auction::PHASES[:finish]
+    if @auction.save
+      redirect_to @auction, :notice => t("auctions.flash.notice.start")
+    else
+      @auction.phase = Auction::PHASES[:start]
+      render :show, flash.now[:alert] => t("auctions.flash.alert.cannot_start")
+    end
+  end
+
 end

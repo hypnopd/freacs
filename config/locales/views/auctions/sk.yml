@@ -13,9 +13,11 @@ sk:
     computing_criteria: Váhy
     send_invitations: Pošli pozvánky
     start: Spusti aukciu
+    finish: Ukonči aukciu
     competitors_count: Počet súťažiacich
     items_count: Počet položiek
     set_total_price_weight: Nastav váhu
+    finish_notice: "Aukcia bola ukončená, ďalej Vás budeme informovať !"
     phases:
       phase: "Fáza:"
       initialization: Inicializácia
