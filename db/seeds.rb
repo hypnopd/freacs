@@ -16,6 +16,10 @@ puts "Creation of WannaWin company"
 wannawin = Company.create! :name => "WannaWin"
 puts "Company WannaWin created"
 
+puts "Creation of WannaWin2 company"
+wannawin2 = Company.create! :name => "WannaWin2"
+puts "Company WannaWin2 created"
+
 #USERS
 #default admin
 puts "Creation of Admin user"
@@ -48,6 +52,17 @@ competitor = User.create! :email => "comp@comp.com",
                           :confirmed_at => DateTime.now,
                           :role => User::ROLES[:competitor],
                           :company_id => wannawin.id
+competitor.update_attribute :parent, creator
+puts "Created Competitor user: " << competitor.email
+
+#default competitor user
+puts "Creation of Competitor user"
+competitor = User.create! :email => "comp2@comp2.com",
+                          :password => "comp22",
+                          :password_confirmation => "comp22",
+                          :confirmed_at => DateTime.now,
+                          :role => User::ROLES[:competitor],
+                          :company_id => wannawin2.id
 competitor.update_attribute :parent, creator
 puts "Created Competitor user: " << competitor.email
 
