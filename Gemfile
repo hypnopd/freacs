@@ -36,7 +36,6 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
 gem "pry", :group => [:development, :test]
-gem 'ruby-debug19', :require => 'ruby-debug', :group => [:development, :test]
 gem 'simple-navigation'
 gem 'cancan'
 
